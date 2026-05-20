@@ -1,0 +1,75 @@
+/* Page-scoped styles for /kurikulum.
+   Tailwind handles 95% of the visual; this file only provides:
+   - keyframes (aurora drift + hero fade-in)
+   - grid background utilities (linear-gradient based)
+   - reveal-on-scroll base + delay steps
+   - testimonial quote glyph
+   - comparison table column highlights
+   Class names are k-prefixed so they cannot collide with about.css or legacy.css. */
+
+@keyframes k-af1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  25%  { transform: translate(60px, -50px) scale(1.15); }
+  50%  { transform: translate(-30px, 40px) scale(.9); }
+  75%  { transform: translate(40px, 20px) scale(1.1); }
+  100% { transform: translate(-20px, -30px) scale(1.05); }
+}
+@keyframes k-af2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(-50px, 30px) scale(1.12); }
+  66%  { transform: translate(40px, -60px) scale(.88); }
+  100% { transform: translate(20px, 50px) scale(1.08); }
+}
+@keyframes k-af3 {
+  0%   { transform: translate(0, 0) scale(1.05); }
+  50%  { transform: translate(70px, -20px) scale(.9); }
+  100% { transform: translate(-40px, 60px) scale(1.1); }
+}
+@keyframes k-af4 {
+  0%   { transform: translate(0, 0) scale(.95); }
+  33%  { transform: translate(-60px, -40px) scale(1.1); }
+  66%  { transform: translate(50px, 30px) scale(1.02); }
+  100% { transform: translate(-20px, 50px) scale(.92); }
+}
+@keyframes k-fadeup {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.k-aorb         { position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; will-change: transform; }
+.k-aorb-a1      { animation: k-af1 16s ease-in-out infinite alternate; }
+.k-aorb-a2      { animation: k-af2 20s ease-in-out infinite alternate; }
+.k-aorb-a3      { animation: k-af3 24s ease-in-out infinite alternate; }
+.k-aorb-a4      { animation: k-af4 18s ease-in-out infinite alternate; }
+
+.k-grid-dark    { background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 80px 80px; }
+.k-grid-light   { background-image: linear-gradient(rgba(10,10,10,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(10,10,10,.03) 1px, transparent 1px); background-size: 80px 80px; }
+
+.k-fu-1 { opacity: 0; animation: k-fadeup .8s .15s forwards; }
+.k-fu-2 { opacity: 0; animation: k-fadeup .8s .30s forwards; }
+.k-fu-3 { opacity: 0; animation: k-fadeup .8s .45s forwards; }
+.k-fu-4 { opacity: 0; animation: k-fadeup .8s .60s forwards; }
+.k-fu-5 { opacity: 0; animation: k-fadeup .8s .80s forwards; }
+
+.k-reveal       { opacity: 0; transform: translateY(32px); transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
+.k-reveal.vis   { opacity: 1; transform: translateY(0); }
+.k-d1 { transition-delay: .08s; }
+.k-d2 { transition-delay: .16s; }
+.k-d3 { transition-delay: .24s; }
+.k-d4 { transition-delay: .32s; }
+
+.k-testi { position: relative; }
+.k-testi::before {
+  content: '\201C';
+  position: absolute; top: 14px; right: 22px;
+  font-size: 60px; font-weight: 900; line-height: 1;
+  color: rgba(200, 131, 12, .08);
+  pointer-events: none;
+}
+
+.k-col-hl  { background: rgba(200, 131, 12, .04) !important; }
+.k-col-mba { background: rgba(185, 28, 28, .02) !important; }
+.k-cmp tr:hover td { background: rgba(200, 131, 12, .03); }
+
+/* Tier-card tilt animation runs from JS but the transition lives here */
+.k-tier-card { transition: transform .5s cubic-bezier(.22,1,.36,1), border-color .5s, box-shadow .5s, background .5s; transform-style: preserve-3d; }

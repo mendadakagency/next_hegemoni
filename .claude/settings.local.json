@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk 'NR==806' c:/nextjs/app/legacy.css)",
+      "Bash(grep -aoE '\\\\.line-lg[^,{]*\\\\{[^}]*' c:/nextjs/public/legacy/index-bumper.js)",
+      "Bash(grep -aoE '\\\\..{1,20}line-lg.{0,200}' c:/nextjs/public/legacy/index-bumper.js)",
+      "Bash(grep -aoE 'hero h1[^\"]{0,500}' c:/nextjs/public/legacy/index-bumper.js)",
+      "Bash(grep -aoE '<br|<\\\\\\\\\\\\\\\\\\\\/br|\\\\\\\\\\\\\\\\n.{0,30}SCALE' c:/nextjs/public/legacy/index-bumper.js c:/nextjs/public/legacy/index-runtime.js)",
+      "Bash(awk 'NR>=15 && NR<=30' c:/nextjs/app/_partials/home-body.js)",
+      "Bash(awk 'NR>=1 && NR<=20' c:/nextjs/app/_partials/home-body.js)",
+      "Bash(awk 'NR>=4 && NR<=14' c:/nextjs/app/_partials/home-body.js)",
+      "Bash(grep -aoE 'hero-dark-block[^\"]{0,200}' c:/nextjs/public/legacy/index-runtime.js)",
+      "Bash(grep -aoE 'hero-dark-block[^\"]{0,200}' c:/nextjs/public/legacy/index-bumper.js)",
+      "Bash(grep -E '\\\\.hero\\(\\\\W|$\\)')",
+      "Bash(grep -aoE '\\\\.announce-bar[^{]*\\\\{[^}]{0,300}' c:/nextjs/app/legacy.css)",
+      "Bash(grep -aoE '\\\\.announce-track[^{]*\\\\{[^}]{0,300}|@keyframes.{0,40}announce' c:/nextjs/app/legacy.css)",
+      "Bash(awk 'NR>=920 && NR<=925' c:/nextjs/app/_partials/home-body.js)",
+      "Bash(grep -E '^body|html\\\\s*\\\\{|html,\\\\s*body')",
+      "Bash(grep -nE 'nav-mobile-menu|className=\"nav\"|</div>\\\\s*$|return \\\\\\(|</>$|^\\\\s*<>' c:/nextjs/components/Navbar.jsx)",
+      "Bash(timeout 45 node_modules/.bin/next build)"
+    ]
+  }
+}
