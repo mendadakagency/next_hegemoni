@@ -109,6 +109,17 @@ const DIFFERENTIATORS = [
   ['P4', 'Closed-Door',     ['Case study angka real, no recording, ', 'peer-level dialog', '. Bukan webinar.']],
 ];
 
+const COMPARE_TIERS = ['Brand Lab', 'Operator Playbook', 'MBA'];
+const COMPARE_ROWS = [
+  ['Target',      ['Owner brand <50jt/bln', ['Owner brand ', '100-500jt/bln'], ['Owner brand ', '500jt+/bln']]],
+  ['Format',      ['LMS recorded', 'LMS + monthly live', 'Bootcamp + advisory']],
+  ['Faculty',     ['Async', 'Monthly live session', 'Direct + WA']],
+  ['Community',   ['Brand Lab group', 'Cohort 100-200', 'Closed-door alumni']],
+  ['Capacity',    ['Unlimited', '100-200/cohort', '100-200/batch']],
+  ['Deliverable', ['Foundational playbook', 'Framework + case study', 'Restructure + advisory']],
+  ['Investasi',   [['Mulai ', 'Rp 500 RB'], ['Mulai ', 'Rp 2.5 JT'], ['Mulai ', 'Rp 8.5 JT']]],
+];
+
 const TESTIMONIALS = [
   ['R', 'Rina',  'Beauty Brand · 300jt/bln',  ['Baru kali ini ikut program yang faculty-nya beneran ', 'nunjukin dashboard live', '. Bukan screenshot 2 tahun lalu.']],
   ['D', 'Dimas', 'F&B Brand · 800jt/bln',     ['Yang bikin beda: ', 'peer-level dialog', '. Gue bisa challenge faculty, mereka jawab pake angka.']],
@@ -263,7 +274,7 @@ export default function KurikulumContent() {
     <main className="bg-ink text-paper overflow-x-hidden">
 
       {/* ══ HERO ══ */}
-      <section className="k-grid-dark relative min-h-[92vh] flex flex-col justify-center overflow-hidden px-6 sm:px-10 lg:px-20 pt-32 pb-6">
+      <section className="k-grid-dark relative min-h-[78vh] sm:min-h-[92vh] flex flex-col overflow-hidden px-6 sm:px-10 lg:px-20 pt-16 sm:pt-24 lg:pt-32 pb-6">
         <Aurora orbs={[
           { a: 1, w: '800px', h: '800px', g: 'radial-gradient(circle,rgba(200,131,12,.35),transparent 65%)', t: '-25%', l: '-15%' },
           { a: 2, w: '600px', h: '600px', g: 'radial-gradient(circle,rgba(185,28,28,.22),transparent 65%)', t: '5%',   r: '-10%' },
@@ -310,7 +321,7 @@ export default function KurikulumContent() {
       </section>
 
       {/* ══ STATS BAR ══ */}
-      <div className="k-reveal -mt-px mx-6 sm:mx-10 lg:mx-20 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 rounded-[10px] border border-paper/5 overflow-hidden bg-carbon/60 backdrop-blur-md relative z-[2]">
+      <div className="k-reveal m-6 sm:m-10 lg:m-20 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 rounded-[10px] border border-paper/5 overflow-hidden bg-carbon/60 backdrop-blur-md relative z-[2]">
         {[
           ['5000', 'M+ GMV / Tahun', true],
           ['12',   'Modul Intensive', false],
@@ -329,7 +340,7 @@ export default function KurikulumContent() {
       </div>
 
       {/* ══ OVERVIEW CARDS ══ */}
-      <section id="overview" className="relative overflow-hidden px-6 sm:px-10 lg:px-20 py-[clamp(80px,8vw,110px)]">
+      <section id="overview" className="k-grid-dark relative overflow-hidden px-6 sm:px-10 lg:px-20 py-[clamp(80px,8vw,110px)]">
         <Aurora orbs={[
           { a: 2, w: '500px', h: '500px', g: 'radial-gradient(circle,rgba(200,131,12,.15),transparent 60%)', t: '-10%', r: '5%' },
           { a: 4, w: '400px', h: '400px', g: 'radial-gradient(circle,rgba(30,58,138,.10),transparent 60%)',  b: '10%',  l: '-5%' },
@@ -355,7 +366,7 @@ export default function KurikulumContent() {
                 key={t.id}
                 href={`#${t.id}`}
                 data-tilt
-                className={`k-tier-card k-reveal k-d${i + 1} group relative overflow-hidden rounded-xl bg-carbon/50 border border-paper/5 p-10 px-7 flex flex-col cursor-pointer hover:border-gold/20 hover:-translate-y-1.5 hover:shadow-[0_24px_64px_rgba(0,0,0,0.3)] ${t.accent === 'gold' ? 'bg-gold/[0.04] border-gold/10' : ''}`}
+                className={`k-tier-card k-reveal k-d${i + 1} group relative overflow-hidden rounded-xl bg-carbon border border-paper/5 p-10 px-7 flex flex-col cursor-pointer hover:border-gold/20 hover:-translate-y-1.5 hover:shadow-[0_24px_64px_rgba(0,0,0,0.3)] ${t.accent === 'gold' ? 'bg-[#23201B] border-gold/10' : ''}`}
               >
                 <span className={`absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r ${accent.bar}`} />
                 {t.badge && (
@@ -514,7 +525,7 @@ export default function KurikulumContent() {
         <div className="relative z-10 font-mono text-[9px] tracking-[3px] uppercase font-medium mb-5 text-gold k-reveal">Apa Yang Lo Dapat</div>
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5 mb-10">
           {OP_FEATURES.map(([title, desc], i) => (
-            <div key={i} className={`k-reveal k-d${(i % 3) + 1} group relative overflow-hidden p-7 px-6 rounded-[10px] bg-carbon/50 border border-paper/[0.04] hover:border-gold/15 hover:-translate-y-1.5 hover:bg-gold/[0.05] transition-all duration-[450ms]`}>
+            <div key={i} className={`k-reveal k-d${(i % 3) + 1} group relative overflow-hidden p-7 px-6 rounded-[10px] bg-carbon border border-paper/[0.04] hover:border-gold/15 hover:-translate-y-1.5 hover:bg-gold/[0.05] transition-all duration-[450ms]`}>
               <span className="absolute top-0 left-0 right-0 h-[2px] bg-gold/15 group-hover:bg-gold transition" />
               <div className="w-11 h-11 rounded-[10px] flex items-center justify-center font-black text-base mb-4 bg-gold/[0.08] text-gold group-hover:bg-gold/15 group-hover:shadow-[0_0_20px_rgba(200,131,12,0.15)] transition">
                 {String(i + 1).padStart(2, '0')}
@@ -528,7 +539,7 @@ export default function KurikulumContent() {
         <div className="relative z-10 font-mono text-[9px] tracking-[3px] uppercase font-medium mb-5 text-gold k-reveal">Kurikulum · 4 Stage × 12 Modul</div>
         <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 k-reveal">
           {OP_MODULES.map(([n, t, d], i) => (
-            <div key={i} className="p-[18px_16px] rounded-lg bg-carbon/40 border border-paper/[0.04] hover:bg-gold/5 hover:border-gold/12 hover:-translate-y-[3px] transition-all duration-300">
+            <div key={i} className="p-[18px_16px] rounded-lg bg-carbon border border-paper/[0.04] hover:bg-gold/5 hover:border-gold/12 hover:-translate-y-[3px] transition-all duration-300">
               <div className="font-mono text-[9px] tracking-[2px] uppercase mb-1.5 font-medium text-paper/35">{n}</div>
               <div className="font-extrabold text-[13px] mb-1 text-paper">{t}</div>
               <div className="text-[11px] leading-[1.5] text-paper/40">{d}</div>
@@ -622,25 +633,18 @@ export default function KurikulumContent() {
           <SectionLabel color="imperial">Perbandingan</SectionLabel>
           <SectionTitle main="SIDE BY SIDE" em="Tiga Tier Dibedah." />
         </div>
-        <div className="relative z-10 mt-12 rounded-xl overflow-hidden border border-ink/8 bg-white k-reveal">
+        {/* Desktop: table */}
+        <div className="hidden md:block relative z-10 mt-12 rounded-xl overflow-hidden border border-ink/8 bg-white k-reveal">
           <table className="k-cmp w-full border-collapse">
             <thead>
               <tr className="bg-sand border-b border-ink/10">
-                {['', 'Brand Lab', 'Operator Playbook', 'MBA'].map((h, i) => (
+                {['', ...COMPARE_TIERS].map((h, i) => (
                   <th key={i} className={`font-mono text-[9px] tracking-[2.5px] uppercase text-ink/30 font-medium text-left p-[18px_24px] ${i === 2 ? 'k-col-hl' : ''} ${i === 3 ? 'k-col-mba' : ''}`}>{h}</th>
                 ))}
               </tr>
             </thead>
             <tbody>
-              {[
-                ['Target',      ['Owner brand <50jt/bln', ['Owner brand ', '100-500jt/bln'], ['Owner brand ', '500jt+/bln']]],
-                ['Format',      ['LMS recorded', 'LMS + monthly live', 'Bootcamp + advisory']],
-                ['Faculty',     ['Async', 'Monthly live session', 'Direct + WA']],
-                ['Community',   ['Brand Lab group', 'Cohort 100-200', 'Closed-door alumni']],
-                ['Capacity',    ['Unlimited', '100-200/cohort', '100-200/batch']],
-                ['Deliverable', ['Foundational playbook', 'Framework + case study', 'Restructure + advisory']],
-                ['Investasi',   [['Mulai ', 'Rp 500 RB'], ['Mulai ', 'Rp 2.5 JT'], ['Mulai ', 'Rp 8.5 JT']]],
-              ].map(([key, cells], i) => (
+              {COMPARE_ROWS.map(([key, cells], i) => (
                 <tr key={i} className="transition-colors duration-300">
                   <td className="font-mono text-[9.5px] tracking-[1.5px] uppercase text-ink/25 font-medium w-[140px] p-[16px_24px] border-b border-ink/[0.04]">{key}</td>
                   {cells.map((c, j) => {
@@ -658,6 +662,41 @@ export default function KurikulumContent() {
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile: card per tier */}
+        <div className="md:hidden relative z-10 mt-10 space-y-4">
+          {COMPARE_TIERS.map((tierName, tierIdx) => {
+            const accent =
+              tierIdx === 1 ? 'border-gold/30 bg-[#F3EDE1]' :
+              tierIdx === 2 ? 'border-crimson/20 bg-[#F4EDE6]' :
+              'border-ink/8 bg-white';
+            const label =
+              tierIdx === 1 ? 'text-gold' :
+              tierIdx === 2 ? 'text-crimson' :
+              'text-ink/40';
+            return (
+              <div key={tierIdx} className={`k-reveal rounded-xl border ${accent} p-5`}>
+                <div className={`font-mono text-[10px] tracking-[2.5px] uppercase font-semibold mb-4 ${label}`}>{tierName}</div>
+                <div className="divide-y divide-ink/[0.06]">
+                  {COMPARE_ROWS.map(([key, cells], i) => {
+                    const c = cells[tierIdx];
+                    const value = Array.isArray(c) ? (
+                      <>{c[0]}<strong className="text-ink font-bold">{c[1]}</strong></>
+                    ) : (
+                      <strong className="text-ink font-bold">{c}</strong>
+                    );
+                    return (
+                      <div key={i} className="flex justify-between items-start gap-4 py-3">
+                        <span className="font-mono text-[9.5px] tracking-[1.5px] uppercase text-ink/30 font-medium pt-0.5 flex-shrink-0">{key}</span>
+                        <span className="text-[13px] leading-[1.5] text-ink/55 text-right">{value}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -677,7 +716,7 @@ export default function KurikulumContent() {
         </div>
         <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
           {DIFFERENTIATORS.map(([n, t, frag], i) => (
-            <div key={i} className={`k-reveal k-d${i + 1} group relative overflow-hidden p-9 px-6 rounded-[10px] bg-carbon/30 border border-paper/[0.04] hover:border-gold/15 hover:-translate-y-1.5 hover:bg-gold/[0.04] transition-all duration-[450ms]`}>
+            <div key={i} className={`k-reveal k-d${i + 1} group relative overflow-hidden p-9 px-6 rounded-[10px] bg-carbon border border-paper/[0.04] hover:border-gold/15 hover:-translate-y-1.5 hover:bg-gold/[0.04] transition-all duration-[450ms]`}>
               <span className="absolute top-0 left-0 right-0 h-[2px] bg-gold/20 group-hover:bg-gold transition" />
               <div className="font-black text-[22px] text-gold mb-4">{n}</div>
               <div className="font-black text-[17px] uppercase tracking-[-0.3px] mb-2.5 text-paper">{t}</div>
