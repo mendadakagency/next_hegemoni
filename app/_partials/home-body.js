@@ -85,6 +85,7 @@ const HOME_BODY = `
 </div>
 </section>
 
+` /* HIDDEN — LMS Preview section disabled so it doesn't render on the home page.
 <!-- ===================================================================
      LMS PREVIEW &mdash; interactive browser-window mock with 4 swappable screens
      Sits between Differentiators and Playbook System.
@@ -307,7 +308,7 @@ const HOME_BODY = `
     </div>
   </div>
 </section>
-
+*/ + `
 
 
 <section class="hfw-section">
