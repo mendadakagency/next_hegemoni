@@ -4122,6 +4122,13 @@ body{
 
 /* === next block === */
 
+/* Hegemoni edit: hide orphan connector line on the last Playbook module
+   (MODULE 09 — line stub extended below the icon with nothing to connect to). */
+.hfwt-item:last-child::after{
+  content: none !important;
+  display: none !important;
+}
+
 
 /* Hegemoni edit: dedicated full mobile hero photos, ordered hero-mobile-1..5 */
 .hdb-mobile-slides{display:none;}
