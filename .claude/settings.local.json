@@ -17,7 +17,9 @@
       "Bash(awk 'NR>=920 && NR<=925' c:/nextjs/app/_partials/home-body.js)",
       "Bash(grep -E '^body|html\\\\s*\\\\{|html,\\\\s*body')",
       "Bash(grep -nE 'nav-mobile-menu|className=\"nav\"|</div>\\\\s*$|return \\\\\\(|</>$|^\\\\s*<>' c:/nextjs/components/Navbar.jsx)",
-      "Bash(timeout 45 node_modules/.bin/next build)"
+      "Bash(timeout 45 node_modules/.bin/next build)",
+      "Bash(awk 'NR>=88 && NR<=310' \"c:/Users/yoga-laptop/next_hegemoni/app/_partials/home-body.js\")",
+      "Bash(grep -c '`')"
     ]
   }
 }
