@@ -808,7 +808,7 @@
 .hero-dark-block{background:transparent!important;background-image:none!important;}
 .hero-dark-block::before,.hero-dark-block::after{display:none!important;}
 .hdb-slides{top:0!important;}
-.hdb-slide{background-position:center center!important;}
+.hdb-slide{background-position:center top!important;}
 
 /* Hegemoni edit: shorter hero slider ratio using 2000x1000 images */
 .hero-dark-block{aspect-ratio:2000/1000!important;min-height:unset!important;}
@@ -864,10 +864,10 @@
 @media (min-width: 601px){
   .hero-left{
     padding-top: clamp(20px, 2.6vw, 42px) !important;
-    padding-bottom: clamp(36px, 5vw, 72px) !important;
+    padding-bottom: 0 !important;
   }
   .hero h1{
-    margin-top: clamp(24px, 6.5vw, 92px) !important;
+    margin-top: 20px !important;
   }
   .hero-eyebrow{
     margin-bottom: 24px !important;
@@ -3528,7 +3528,7 @@ body{
   }
   .hdb-slide{
     background-size: cover !important;
-    background-position: center center !important;
+    background-position: center top !important;
   }
   /* Scrim — dark gradient over photo so text stays legible */
   .hero-dark-block::after{
@@ -4122,11 +4122,14 @@ body{
 
 /* === next block === */
 
-/* Hegemoni edit: hide orphan connector line on the last Playbook module
-   (MODULE 09 — line stub extended below the icon with nothing to connect to). */
-.hfwt-item:last-child::after{
-  content: none !important;
-  display: none !important;
+/* Hegemoni edit: hide orphan connector line on the last Playbook module on
+   mobile only (MODULE 09 — line stub extended below the icon with nothing to
+   connect to). Desktop keeps the line per design. */
+@media (max-width: 600px){
+  .hfwt-item:last-child::after{
+    content: none !important;
+    display: none !important;
+  }
 }
 
 
@@ -4640,4 +4643,166 @@ body{
   .lms-tab-btn{padding:11px 14px;}
   .lms-tab-btn:nth-child(2){border-right:0;}
   .lms-tab-btn:nth-child(1),.lms-tab-btn:nth-child(2){border-bottom:1px solid rgba(245,241,234,.06);}
+}
+
+
+/* === Unified hero h1 layout across every viewport ============================
+   Force the desktop stacked layout (SCALE / YOUR BRAND / with Active Commerce
+   Playmakers.) on all breakpoints. Overrides the mobile-only ≤600px rules
+   that previously shrank font-size to 42/21px. */
+.hero h1,
+.hero-dark-block .hero h1 {
+  font-size: clamp(40px, 7vw, 80px) !important;
+  line-height: .9 !important;
+  letter-spacing: -.04em !important;
+  text-align: left !important;
+  margin-top: 20px !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+}
+.hero h1 .line-lg,
+.hero-dark-block .hero h1 .line-lg {
+  display: block !important;
+  font-size: inherit !important;
+  color: rgba(245,241,234,.95) !important;
+  -webkit-text-fill-color: rgba(245,241,234,.95) !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  text-shadow: none !important;
+}
+.hero h1 .line-gold,
+.hero-dark-block .hero h1 .line-gold {
+  display: block !important;
+  width: auto !important;
+  max-width: none !important;
+  font-size: clamp(20px, 3vw, 40px) !important;
+  font-style: italic !important;
+  font-weight: 800 !important;
+  color: var(--gold) !important;
+  -webkit-text-fill-color: var(--gold) !important;
+  letter-spacing: -.02em !important;
+  margin-top: .1em !important;
+}
+.hero h1 .line-gold .typing-active-commerce,
+.hero-dark-block .hero h1 .line-gold .typing-active-commerce {
+  white-space: pre-line !important;
+}
+
+
+/* === Fix hero clipping on narrower desktop viewports ====================
+   Default rule absolute-positions .hero inside .hero-dark-block, locking
+   content into min-height. On narrow desktops the 50vw min-height shrinks
+   but text content doesn't, so buttons + paragraph get clipped by
+   overflow:hidden. Fix: make .hero a normal-flow block so parent grows
+   with content. The slider images stay absolute and fill whatever
+   height results. */
+@media (min-width: 601px) {
+  .hero-dark-block {
+    display: block !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    min-height: min(46.25vw, 86vh) !important;
+    isolation: isolate;
+  }
+  .hero-dark-block > .hero {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    overflow: visible !important;
+    z-index: 2 !important;
+  }
+}
+.hero-kpi-marquee-shell {
+  isolation: isolate;
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+
+/* === Disable scroll-driven "Apple sink" animation on KPI/marquee section ==== */
+.hero-kpi-marquee-shell.ha-logo-sink-enabled,
+.hero-kpi-marquee-shell {
+  transform: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+  will-change: auto !important;
+}
+.hero-kpi-marquee-shell.ha-logo-sink-enabled::after {
+  display: none !important;
+  background: none !important;
+  content: none !important;
+}
+#program.ha-diff-takeover::before {
+  display: none !important;
+  background: none !important;
+  content: none !important;
+}
+#program.ha-diff-takeover .sec-center,
+#program.ha-diff-takeover .highlights {
+  transform: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+
+/* Gap between stats card and brand marquee below it */
+.hero-kpi-marquee-shell .brand-marquee-wrap {
+  margin-top: clamp(28px, 3vw, 56px) !important;
+}
+
+
+/* === Home stats bar — match kurikulum-page bordered card look ============== */
+.hero-kpi-marquee-shell .stats.revised-metrics {
+  border-radius: 10px !important;
+  border: 1px solid rgba(245, 241, 234, 0.06) !important;
+  background: rgba(28, 28, 28, 0.6) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+.hero-kpi-marquee-shell .stats.revised-metrics .stat {
+  padding: 32px 16px !important;
+  border-right: 1px solid rgba(245, 241, 234, 0.05) !important;
+  transition: background .3s ease !important;
+  text-align: center !important;
+}
+.hero-kpi-marquee-shell .stats.revised-metrics .stat:last-child {
+  border-right: 0 !important;
+}
+.hero-kpi-marquee-shell .stats.revised-metrics .stat:hover {
+  background: rgba(200, 131, 12, 0.06) !important;
+}
+@media (max-width: 860px) {
+  .hero-kpi-marquee-shell .stats.revised-metrics .stat:nth-child(2) {
+    border-right: 0 !important;
+  }
+  .hero-kpi-marquee-shell .stats.revised-metrics .stat:nth-child(1),
+  .hero-kpi-marquee-shell .stats.revised-metrics .stat:nth-child(2) {
+    border-bottom: 1px solid rgba(245, 241, 234, 0.05) !important;
+  }
+}
+
+
+/* Navbar logo sizing — desktop +30%, mobile -25% */
+.nav-logo-mark {
+  width: 47px !important;
+  height: 47px !important;
+}
+.nav-logo-text {
+  font-size: 14px !important;
+}
+@media (max-width: 600px) {
+  .nav-logo-mark {
+    width: 27px !important;
+    height: 27px !important;
+  }
+  .nav-logo-text {
+    font-size: 8.5px !important;
+  }
 }

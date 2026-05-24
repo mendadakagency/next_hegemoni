@@ -5,6 +5,7 @@
    - reveal-on-scroll base + delay steps
    - testimonial quote glyph
    - comparison table column highlights
+   - phase header + module accordion components
    Class names are k-prefixed so they cannot collide with about.css or legacy.css. */
 
 @keyframes k-af1 {
@@ -73,3 +74,708 @@
 
 /* Tier-card tilt animation runs from JS but the transition lives here */
 .k-tier-card { transition: transform .5s cubic-bezier(.22,1,.36,1), border-color .5s, box-shadow .5s, background .5s; transform-style: preserve-3d; }
+
+/* ──────────────────────────────────────────────
+   Phase / cluster header — prominent chapter divider.
+   ────────────────────────────────────────────── */
+.k-phase-wrap { margin-bottom: 36px; }
+.k-phase-wrap:last-child { margin-bottom: 0; }
+
+.k-phase {
+  display: flex;
+  align-items: stretch;
+  gap: 18px;
+  padding: 14px 0 16px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid rgba(10,10,10,.08);
+  position: relative;
+}
+.k-phase[data-theme="dark"] { border-bottom-color: rgba(245,241,234,.08); }
+
+.k-phase-bignum {
+  font-size: clamp(48px, 6vw, 72px);
+  font-weight: 900;
+  line-height: .9;
+  letter-spacing: -.04em;
+  color: var(--accent);
+  opacity: .14;
+  flex-shrink: 0;
+  font-feature-settings: 'tnum' on;
+}
+
+.k-phase-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.k-phase-label {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.k-phase-title {
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -.025em;
+  text-transform: uppercase;
+}
+.k-phase[data-theme="light"] .k-phase-title { color: #0A0A0A; }
+.k-phase[data-theme="dark"]  .k-phase-title { color: #F5F1EA; }
+
+.k-phase-count {
+  align-self: flex-end;
+  text-align: right;
+  flex-shrink: 0;
+  padding-bottom: 4px;
+}
+.k-phase-count-n {
+  display: block;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--accent);
+}
+.k-phase-count-l {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 9px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+.k-phase[data-theme="light"] .k-phase-count-l { color: rgba(10,10,10,.4); }
+.k-phase[data-theme="dark"]  .k-phase-count-l { color: rgba(245,241,234,.4); }
+
+/* ──────────────────────────────────────────────
+   Module grid — masonry-style via CSS columns.
+   Cards flow top-to-bottom per column, so when one
+   card expands the next card in reading order
+   auto-fills the empty space below its neighbor.
+   ────────────────────────────────────────────── */
+.k-mod-grid {
+  column-count: 1;
+  column-gap: 10px;
+}
+@media (min-width: 1024px) {
+  .k-mod-grid { column-count: 2; }
+}
+
+/* ──────────────────────────────────────────────
+   Module card — collapsed + expanded states.
+   Custom property --accent is set inline per module
+   (amber / gold / crimson) so all hover/open colors
+   stay synced with the tier accent.
+   ────────────────────────────────────────────── */
+.k-mod {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: background .25s, border-color .25s, box-shadow .25s, transform .25s;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* light theme */
+.k-mod-light {
+  background: #fff;
+  border: 1px solid rgba(10,10,10,.06);
+}
+.k-mod-light:hover {
+  border-color: color-mix(in srgb, var(--accent) 25%, transparent);
+  box-shadow: 0 6px 20px -8px rgba(10,10,10,.12);
+  transform: translateY(-1px);
+}
+.k-mod-light.is-open {
+  border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+  box-shadow: 0 14px 38px -12px rgba(10,10,10,.18);
+  background: linear-gradient(180deg, #fff 0%, color-mix(in srgb, var(--accent) 3%, #fff) 100%);
+}
+
+/* dark theme */
+.k-mod-dark {
+  background: #1C1C1C;
+  border: 1px solid rgba(245,241,234,.06);
+}
+.k-mod-dark:hover {
+  border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+  background: #211f1a;
+  transform: translateY(-1px);
+}
+.k-mod-dark.is-open {
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  background: linear-gradient(180deg, #1f1d18 0%, #1C1C1C 100%);
+  box-shadow: 0 14px 38px -12px rgba(0,0,0,.6);
+}
+
+/* Button — collapsed-state row */
+.k-mod-btn {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-family: inherit;
+  color: inherit;
+}
+
+/* Number badge — square w/ accent border, fills on hover */
+.k-mod-badge {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid color-mix(in srgb, var(--accent) 28%, transparent);
+  transition: background .25s, border-color .25s, color .25s;
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+}
+.k-mod-badge-n {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: -.02em;
+  color: var(--accent);
+  font-feature-settings: 'tnum' on;
+  transition: color .25s;
+}
+.k-mod:hover .k-mod-badge,
+.k-mod.is-open .k-mod-badge {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.k-mod:hover .k-mod-badge-n,
+.k-mod.is-open .k-mod-badge-n {
+  color: #fff;
+}
+
+.k-mod-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.k-mod-titlerow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.k-mod-title {
+  font-size: 14.5px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -.01em;
+}
+.k-mod-light .k-mod-title { color: #0A0A0A; }
+.k-mod-dark  .k-mod-title { color: #F5F1EA; }
+
+.k-mod-sub {
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.k-mod-light .k-mod-sub { color: rgba(10,10,10,.55); }
+.k-mod-dark  .k-mod-sub { color: rgba(245,241,234,.5); }
+
+.k-mod-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  margin-top: 2px;
+}
+.k-mod-dur {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 10px;
+  letter-spacing: .04em;
+}
+.k-mod-light .k-mod-dur { color: rgba(10,10,10,.4); }
+.k-mod-dark  .k-mod-dur { color: rgba(245,241,234,.4); }
+.k-mod-dot {
+  font-size: 11px;
+  margin: 0 2px;
+}
+.k-mod-light .k-mod-dot { color: rgba(10,10,10,.25); }
+.k-mod-dark  .k-mod-dot { color: rgba(245,241,234,.25); }
+
+/* Inline FREE pill — replaces the corner ribbon */
+.k-mod-freepill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #16A34A;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px -2px rgba(22,163,74,.4);
+}
+
+.k-mod-arrow {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .3s cubic-bezier(.22,1,.36,1), background .25s, color .25s;
+}
+.k-mod-light .k-mod-arrow { color: rgba(10,10,10,.4); background: rgba(10,10,10,.04); }
+.k-mod-dark  .k-mod-arrow { color: rgba(245,241,234,.5); background: rgba(245,241,234,.06); }
+.k-mod:hover .k-mod-arrow {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+}
+.k-mod.is-open .k-mod-arrow {
+  transform: rotate(180deg);
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Expanded detail panel */
+.k-mod-detail {
+  padding: 4px 24px 22px 82px;
+  animation: k-mod-open .35s cubic-bezier(.22,1,.36,1);
+}
+@keyframes k-mod-open {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.k-detail-label {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+
+.k-detail-cs-block {
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border-left: 2px solid var(--accent);
+}
+.k-mod-light .k-detail-cs-block { background: color-mix(in srgb, var(--accent) 5%, #fff); }
+.k-mod-dark  .k-detail-cs-block { background: rgba(255,255,255,.03); }
+.k-detail-cs-block .k-detail-label { margin-bottom: 5px; }
+
+.k-detail-cs {
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.65;
+}
+.k-mod-light .k-detail-cs { color: rgba(10,10,10,.6); }
+.k-mod-dark  .k-detail-cs { color: rgba(245,241,234,.55); }
+
+.k-detail-subs {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.k-detail-subs li {
+  display: flex;
+  gap: 12px;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+.k-mod-light .k-detail-subs li { color: rgba(10,10,10,.72); }
+.k-mod-dark  .k-detail-subs li { color: rgba(245,241,234,.7); }
+
+.k-detail-subn {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+  min-width: 22px;
+  color: var(--accent);
+  opacity: .65;
+}
+
+.k-detail-del {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-top: 14px;
+}
+.k-mod-light .k-detail-del { background: rgba(10,10,10,.03); }
+.k-mod-dark  .k-detail-del { background: rgba(245,241,234,.04); }
+
+.k-detail-del-label {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  flex-shrink: 0;
+  margin-top: 2px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: var(--accent);
+  color: #fff;
+}
+.k-detail-del-text {
+  font-size: 11.5px;
+  line-height: 1.55;
+  font-weight: 500;
+}
+.k-mod-light .k-detail-del-text { color: rgba(10,10,10,.75); }
+.k-mod-dark  .k-detail-del-text { color: rgba(245,241,234,.7); }
+
+/* ──────────────────────────────────────────────
+   Journey macbook browser mockup — desktop hero
+   variant. macOS Safari-style browser window with
+   traffic lights, URL bar, sidebar nav + main panel.
+   ────────────────────────────────────────────── */
+.k-laptop-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1040px;
+}
+
+.k-laptop {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  background: #0A0A0A;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 60px 120px -30px rgba(0, 0, 0, 0.85),
+    0 25px 60px -10px var(--accent, rgba(200, 131, 12, 0.22)),
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: k-laptop-float 8s ease-in-out infinite;
+  transition: box-shadow .6s ease;
+  position: relative;
+}
+
+@keyframes k-laptop-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+.k-laptop-chrome {
+  height: 42px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, #232323 0%, #1c1c1c 100%);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  gap: 14px;
+}
+
+.k-laptop-dots {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.k-laptop-dots span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.k-laptop-url {
+  flex: 1;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.k-laptop-chrome-actions {
+  flex-shrink: 0;
+  display: flex;
+  gap: 5px;
+  width: 56px;
+  justify-content: flex-end;
+}
+.k-laptop-chrome-actions span {
+  width: 14px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 1px;
+}
+
+.k-laptop-content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  min-height: 0;
+  background: #050505;
+}
+
+.k-laptop-sidebar {
+  background: #0c0c0c;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 18px 12px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.k-laptop-navitem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 8px;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all .25s;
+  text-align: left;
+  font-family: inherit;
+}
+.k-laptop-navitem:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.75);
+}
+.k-laptop-navitem.active {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: rgba(255, 255, 255, 0.95);
+  box-shadow: inset 2px 0 0 var(--accent);
+}
+
+.k-laptop-navbadge {
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 900;
+  flex-shrink: 0;
+  transition: all .25s;
+}
+
+.k-laptop-main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  animation: k-screen-fade .55s cubic-bezier(.22,1,.36,1);
+}
+
+/* ──────────────────────────────────────────────
+   Journey phone mockup — animated app simulation
+   sitting in the hero's right column. iPhone-style
+   frame with notch, status bar, home indicator.
+   Auto-cycles through 3 tiers via React state.
+   ────────────────────────────────────────────── */
+.k-phone-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.k-phone {
+  position: relative;
+  width: 300px;
+  height: 610px;
+  border-radius: 46px;
+  background: linear-gradient(150deg, #2a2a2a 0%, #1a1a1a 50%, #0e0e0e 100%);
+  padding: 8px;
+  box-shadow:
+    0 40px 100px -20px rgba(0, 0, 0, 0.75),
+    0 12px 40px -8px var(--accent, rgba(200, 131, 12, 0.25)),
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  animation: k-phone-float 7s ease-in-out infinite;
+  transition: box-shadow .6s ease;
+}
+
+@keyframes k-phone-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+.k-phone-screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 38px;
+  background: #050505;
+  overflow: hidden;
+  position: relative;
+}
+
+.k-phone-notch {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 28px;
+  background: #000;
+  border-radius: 14px;
+  z-index: 30;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
+}
+
+.k-phone-indicator {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+  z-index: 30;
+}
+
+.k-phone-statusbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 26px 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  z-index: 25;
+  font-feature-settings: 'tnum';
+  pointer-events: none;
+}
+
+.k-screen-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 56px 14px 30px;
+  position: relative;
+  animation: k-screen-fade .55s cubic-bezier(.22,1,.36,1);
+}
+
+@keyframes k-screen-fade {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.k-progress-bar {
+  animation: k-progress-fill 1.2s cubic-bezier(.22,1,.36,1);
+  transform-origin: left;
+}
+
+@keyframes k-progress-fill {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+.k-phone-dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.k-phone-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  transition: all .35s cubic-bezier(.22,1,.36,1);
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+.k-phone-dot:hover { background: rgba(255, 255, 255, 0.4); }
+.k-phone-dot.active {
+  width: 28px;
+  border-radius: 4px;
+}
+
+/* Crossover variant — non-interactive reference cards */
+.k-mod-cx { cursor: default; }
+.k-mod-cx:hover {
+  transform: none;
+  box-shadow: 0 4px 14px -8px rgba(10,10,10,.10);
+}
+.k-mod-cx:hover .k-mod-badge {
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 28%, transparent);
+}
+.k-mod-cx:hover .k-mod-badge-n { color: var(--accent); }
+
+.k-mod-k2pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(91,58,75,.12);
+  color: #5B3A4B;
+  flex-shrink: 0;
+}
+
+.k-mod-cxfrom {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 9.5px;
+  letter-spacing: .04em;
+  color: rgba(10,10,10,.4);
+  margin-top: -2px;
+}
+
+@media (max-width: 640px) {
+  .k-mod-btn { padding: 14px; gap: 14px; }
+  .k-mod-badge { width: 38px; height: 38px; }
+  .k-mod-badge-n { font-size: 14px; }
+  .k-mod-detail { padding: 4px 14px 18px 14px; }
+  .k-phase { gap: 12px; }
+  .k-phase-bignum { font-size: 44px; }
+  .k-phase-title { font-size: 18px; }
+}
