@@ -1,0 +1,26 @@
+{
+  "name": "The Playmakers — Premium Commerce Education Indonesia",
+  "short_name": "The Playmakers",
+  "description": "Sekolah commerce nomor 1 di Indonesia untuk owner brand miliaran. TikTok Shop, Shopee, GMV Max, KOL Affiliate, Live Commerce.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#0A0A0A",
+  "orientation": "portrait",
+  "lang": "id-ID",
+  "categories": ["education", "business", "productivity"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
