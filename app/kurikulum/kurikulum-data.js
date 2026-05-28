@@ -10,7 +10,7 @@ export const BL_PHASES = [
       {
         n: '01',
         free: true,
-        title: 'Kenapa Brand Lo Belum Laku',
+        title: 'Kenapa Brand Kamu Belum Laku',
         sub: 'Diagnosa jujur sebelum bakar duit',
         tags: ['fundamental'],
         dur: '5 video · 60 mnt',
@@ -97,7 +97,7 @@ export const BL_PHASES = [
         subs: [
           'Daftar TikTok Shop pasca merger Tokopedia via Seller Center (alur terbaru)',
           'Hubungkan akun TikTok personal/bisnis ke toko — step yang sering gagal',
-          'Komisi 4–6% dinamis per kategori (berlaku Juni 2025) — efek ke pricing lo',
+          'Komisi 4–6% dinamis per kategori (berlaku Juni 2025) — efek ke pricing kamu',
           'Setting Affiliate Plan: open vs targeted, komisi benchmark 10–15%',
           'Compliance konten komersial: label, klaim, konten yang dilarang',
           'Cara aktifkan keranjang kuning di video & live',
@@ -107,7 +107,7 @@ export const BL_PHASES = [
   },
   {
     n: '02',
-    title: 'Listing, Foto & Konten',
+    title: 'Etalase yang Menjual',
     modules: [
       {
         n: '07',
@@ -143,17 +143,21 @@ export const BL_PHASES = [
       {
         n: '09',
         title: 'Video Product Demo 60 Detik yang FYP',
-        sub: '30 video dalam 30 hari — struktur, edit, posting',
+        sub: '30 video dalam 30 hari — struktur, edit, posting + matematika watch time',
         tags: ['teknis', 'growth'],
-        dur: '7 video · 85 mnt',
-        del: 'Video Script Bank — 50 hook + 10 skrip',
+        dur: '9 video · 110 mnt',
+        cs: 'Brighty 4 video FYP all-time: watch time >90%, watch full video 45%+, semua durasi <30 detik. Irna Ayu (1.6M views): hook problem relatable 7 detik dari 11 detik durasi = 63% video buat build curiosity, add product detik 8, CTA 1 detik terakhir. Belzky (1M views): watch time 119% (artinya rewatch >1x = FYP rocket).',
+        del: 'Video Script Bank — 50 hook + 10 skrip + Watch Time Calculator Sheet + Per-Detik Storyboard Template',
         subs: [
           'Anatomi video viral: Hook 3 detik → Pain Point → Demo → Before/After → CTA keranjang',
           '12 hook template yang masih perform di 2026 — dengan contoh video referensi',
           'Recording setup minimal: HP + tripod + mic eksternal < Rp 300rb',
           'Edit di CapCut: cutting cepat, caption auto, sound viral, CapCut AI',
           'Posting schedule: 1–2 video/hari selama 30 hari pertama — kenapa ini wajib',
-          'Kalau views stuck 100–500: checklist iterasi yang harus dicek',
+          'FYP Formula by the Numbers: % Watch Time = (Avg Watch Time ÷ Durasi Video) × 100. Threshold FYP-ready: >90% watch time + >40% watch full video + durasi optimal <30 detik. Cara narik data dari TikTok Analisis: cek per video apakah hit threshold sebelum scale konten yang sama.',
+          'Tingkatan signal algoritma TikTok dari rendah ke tinggi: Likes (paling rendah, mudah didapat) → Komentar → Share → Rewatch (paling tinggi). Rewatch = watch time >100% = algoritma rocket distribusi. Target konten kamu bukan jumlah likes, tapi memicu rewatch dan share.',
+          'Per-Detik Storyboard Method — case Irna Ayu (1.6M views, 11 detik): detik 1–7 (63% durasi) = problem relatable "kami kira deodoran bisa bikin cerah" tanpa show produk, detik 8 = add product dengan unsur "seribu" (curiosity hook), detik 11 = hard CTA "flash sale 00.00". Ini template yang kamu bisa apply ke produk apapun: 60% durasi build pain point, 30% solusi+produk, 10% CTA.',
+          'Kalau views stuck 100–500: checklist iterasi yang harus dicek (hook 3 detik, durasi, audio trending, niche kontinuitas)',
         ],
       },
       {
@@ -173,7 +177,7 @@ export const BL_PHASES = [
       },
       {
         n: '11',
-        title: 'Hero Product: Pilih 1 SKU yang Lo Goreng',
+        title: 'Hero Product: Pilih 1 SKU yang Kamu Goreng',
         sub: 'Fokus = leverage. Scatter = mati',
         tags: ['fundamental', 'growth'],
         dur: '4 video · 50 mnt',
@@ -183,7 +187,7 @@ export const BL_PHASES = [
           'Cara pilih hero dari katalog yang ada: matriks margin × demand',
           'Hero pricing psychology: range Rp 49rb / 99rb / 149rb',
           'Bundle strategy: hero + companion SKU untuk naikin AOV 30–50%',
-          'Hero positioning: produk lo = solusi apa dalam 1 kalimat',
+          'Hero positioning: produk kamu = solusi apa dalam 1 kalimat',
         ],
       },
       {
@@ -205,13 +209,13 @@ export const BL_PHASES = [
   },
   {
     n: '03',
-    title: 'Traffic & Sales',
+    title: 'Mesin Akuisisi',
     modules: [
       {
         n: '13',
         free: true,
         title: 'Algoritma TikTok Shop & Shopee untuk Toko Baru',
-        sub: 'Signal yang harus lo feed di 60 hari pertama',
+        sub: 'Signal yang harus kamu feed di 60 hari pertama',
         tags: ['teknis', 'growth'],
         dur: '4 video · 50 mnt',
         del: '60-Day Algorithm Boost Roadmap',
@@ -242,9 +246,9 @@ export const BL_PHASES = [
         n: '15',
         title: 'TikTok Ads Manager: Ekosistem, Search Ads & Creative Setup',
         sub: 'Seller Center vs Ads Manager vs Business Center — 3 pintu yang beda fungsinya',
-        tags: ['teknis', 'ads'],
-        dur: '5 video · 65 mnt',
-        del: 'TikTok Account Structure Checklist + Search Ads Keyword Starter Pack',
+        tags: ['teknis', 'ads', 'tiktok'],
+        dur: '6 video · 75 mnt',
+        del: 'TikTok Account Structure Checklist + Search Ads Keyword Starter Pack + Meta Business Manager Setup Checklist (Foundational untuk CPAS nanti)',
         subs: [
           'Peta ekosistem TikTok ads: Seller Center (entry) → Ads Manager (control room) → Business Center (enterprise) — mana yang dipakai kapan dan bagaimana ketiganya terhubung',
           'Primary Ad Account rules: 1 toko = 1 primary account. Ganti sembarangan = semua GMV Max aktif auto-pause. Ini kesalahan paling mahal yang sering tidak disadari pemula',
@@ -252,6 +256,7 @@ export const BL_PHASES = [
           'Creative asset wajib sebelum GMV Max: minimum 5 video organik + 10 affiliate posts authorized. Tanpa ini algoritma tidak punya material untuk optimize dan boncos lebih besar',
           'Spark Ads authorization: cara approve konten organik dan kreator menjadi asset GMV Max — step by step dari Seller Center',
           'Common setup error pemula: salah connect Business Center, multiple primary accounts, tidak authorize affiliate content sebelum launch — dan cara benerin',
+          'Foundational: Meta Business Manager setup (parallel infra untuk nanti masuk CPAS Shopee/Tokopedia di tier Playmaker Room/War Room). Step: business.facebook.com → Create Account → tambah Fanspage (link URL) → tambah admin via email → setup metode pembayaran (CVV, nomor kartu, expiry) → install Meta Pixel di catalog. Wajib disiapkan dari awal — bukan tunggu siap CPAS baru bikin.',
         ],
       },
       {
@@ -282,7 +287,7 @@ export const BL_PHASES = [
           'Setup live modal HP: lighting, mic, backdrop, layout produk di frame',
           'Skrip 60 menit pertama: pembukaan → demo produk → urgensi → closing',
           'Pre-heat live: notif 1 jam sebelum, post video teaser, broadcast WA',
-          'Host pertama = lo sendiri: cara latih on-cam confidence tanpa cringe',
+          'Host pertama = kamu sendiri: cara latih on-cam confidence tanpa cringe',
           'Interaktivitas: balas komen, mention nama penonton, kuis untuk retention',
           'Voucher live-only: cara setting flash sale di Shopee Live & TikTok Live',
         ],
@@ -305,6 +310,65 @@ export const BL_PHASES = [
       },
       {
         n: '19',
+        title: 'KOL Research & Filter: Pilih yang FYP, Bukan yang Tampan',
+        sub: 'Tipologi + Formula 50% + Outreach SOP — bedah objektif sebelum kasih duit',
+        tags: ['growth', 'teknis'],
+        dur: '6 video · 80 mnt',
+        cs: 'Content Creator vs Seleb TikTok — pattern observasi: Farhan @farrhnn (895k followers, 12-video avg >100k views = top CC), Maria Sharita (610k followers, avg 60–160k = high FYP probability), Cinta Citata (297k followers, views 6–60k = inconsistent low-FYP), Duta Micin (92k followers, views 1–80k = high gap inconsistent).',
+        del: 'KOL Filter Sheet (12-Video Audit Template) + Outreach DM Script Bank + Persona-Product Fit Matrix + KOL Database Template (12 kolom: akun, IG, kontak, ratecard, followers, no rek, alamat, konten, tanggal bayar, resi, jadwal tayang)',
+        subs: [
+          '2 tipe Tiktokers — Seleb TikTok vs Content Creator: bedanya bukan estetika, tapi economics. Seleb = jual muka, views inkonsisten, ratecard 30–50% lebih mahal. Content Creator = kualitas konten, fanbase militan, views konsisten = FYP probability tinggi',
+          '3 filter wajib sebelum endorse: (1) tipe — Seleb vs CC, (2) probabilitas FYP, (3) personal branding alignment dengan produk. Skip salah satu = bakar duit',
+          'Formula 50% Rule untuk probabilitas FYP: cek 12 video terakhir KOL — minimal 6 video harus punya views > total followers. Kalau 100k follower, minimal 6 video viewsnya >100k. Gap min-max views tidak boleh terlalu jauh (max 10x dari min)',
+          'Personal Branding Alignment Framework — match produk dengan persona KOL. Skincare premium ≠ selebtiktok lifestyle. Mommy product ≠ kreator gym goer. Anti-pattern fatal: pilih KOL hanya based on followers, tanpa cek konten history',
+          'Outreach SOP step-by-step: cari via hashtag (#skincare #beautyhaul) → klik IG di bio TikTok → like 5 postingan IG terakhir → komen di post terakhir "Halo Ka, cek dm yaa" → DM tanya ratecard → tanya alamat + no rekening → tanya brand previous yang pernah endorse (red flag check)',
+          'Jadiin temen dulu doctrine: hubungan personal > brand-to-KOL transaksional. KOL adalah wayout komunikasi brand ke audience, bukan entitas terpisah. Investment di relationship = negotiation power + loyalty + long-term retainer rate 25–40% lebih murah',
+          'Algoritma TikTok content mechanics — kenapa Formula 50% works: TikTok lempar konten ke ~100 user random pertama → algoritma baca 4 signal (Like, Komentar, Share, Repetition views) → kalau positif, distribusi diperluas. Views konsisten >followers = bukti konten kamu bisa lewat batas akun (FYP-ready)',
+          'Template database TikTokers — 12 kolom wajib: No, Akun TikTok, Instagram, Kontak DM/WA, Biaya TikTok, Biaya IG, Followers TT, Followers IG, No Rekening, Konten yang Diusahakan, Tanggal Pembayaran, Alamat Lengkap + No Resi + Jadwal Tayang',
+        ],
+      },
+      {
+        n: '20',
+        title: 'Crystal Clear Brief & Anti-Overclaim',
+        sub: 'USP-driven brief framework + 360 Campaign foundation — hasil video KOL match ekspektasi, brand image safe',
+        tags: ['growth', 'fundamental'],
+        dur: '6 video · 85 mnt',
+        cs: 'Brighty pemutih ketiak — campaign "pemutih tanpa whitecast" generate 5 angle variant. Jiera #7DaysChallenge (2020-2021): 360 Campaign integrated KOL + UGC + multi-platform → 14.000+ post organic, 100.000.000 impresi dalam <1 tahun, 1jt pcs terjual dalam 1 tahun. Anonim skincare 2023: overclaim "turun 10kg/minggu" tanpa research → BPOM warning + brand reputation collapse, recovery 6 bulan.',
+        del: 'Crystal Clear Brief Template (5-section) + USP Comparison Matrix Sheet + Headline Variation Generator (5 angle dari 1 USP) + Anti-Overclaim Compliance Checklist + Brief Approval Workflow (founder → KOL Manager → KOL) + 360 Campaign Planner (4-Pillar Worksheet)',
+        subs: [
+          'Cari pembeda produk sebagai key message. Sebelum bikin brief, isi USP Comparison Matrix: kompetitor punya apa, kamu punya apa, mana yang kamu bisa claim dengan jujur. Tanpa USP = brief generic = video KOL generic = views ada tapi conversion nol',
+          'Comparison framework elaborasi: produk lain punya instant whitening tapi ada whitecast + susah nyerap. Produk kamu: tidak instant whitening, tidak whitecast, mudah nyerap. → key message: "pemutih tanpa whitecast"',
+          '5 angle headline variant dari 1 USP: "pemutih ketiak paling nyaman dipakai" / "pemutih ketiak tapi kok bening?" / "pemutih ketiak rekomendasi aku" / "pemutih tanpa whitecast" / "pemutih ketiak yang gampang nyerap". Test 5 angle ke 5 KOL berbeda — identify mana yang highest watch time + ATC',
+          'Format Crystal Clear Brief — 5 section wajib: (1) Header campaign (e.g. "Rekomendasi Pemutih Ketiak"), (2) Hook + timing pemakaian, (3) Pain point vs solusi (pakai bahasa KOL, bukan corporate), (4) USP highlight + price anchor, (5) Hard CTA "Checkout sekarang. Shopeenya: brighty.id"',
+          'Bahaya OVERCLAIM — semua yang KOL ucapkan = persepsi brand permanen. Case: produk turun BB tanpa research → KOL ucap "turun 10kg dalam 1 minggu" → BPOM warning + customer lawsuit + brand reputation collapse 6 bulan recovery. Profit secuil sekarang, brand mati di future',
+          'Cara benar brief produk dengan efek subtle: "aku cobain Brand A katanya bisa bantu nurunin BB, kebetulan abis banyak makan. Ini hasil pemakaian aku [foto hari 1–30]. Alhamdulillah cocok, turun 3kg dalam 1 bulan. Tapi tetep jaga makan + olahraga. Kalo mau coba, checkout di sini." Honest + relatable + tetap convert',
+          'Anti-framing rule: jangan potong informasi tentang produk. Kalau produk butuh 4 minggu untuk hasil, jangan brief KOL bilang "2 minggu". Framing manipulatif = viral 1 minggu, complaint 1 tahun. Compliance checklist BPOM: kata yang dilarang (instant, ajaib, garansi 100%) + claim yang butuh sertifikasi',
+          'Personalize brief sesuai persona KOL. Casual creator yang vibe-nya "akhirnya pulang" aja bisa convert, asal brief nyambung sama branding mereka. Brief kaku ke kreator casual = video terasa iklan = views drop. Brief contextual = views naik + conversion naik. KOL Manager wajib audit brief per persona sebelum blast',
+          '360 Campaign Framework — sebelum execute KOL blast individual, design campaign payung. 4 Pillar wajib: (1) USP Product di-locked dulu (jangan develop campaign tanpa USP clear), (2) Cari kelemahan kategori — apa pain point yang kompetitor tidak address, (3) KOL stack yang tepat untuk kategori produk (bukan asal followers), (4) Media Coverage all-platform — keramaian harus terjadi simultan di IG, TikTok, Twitter/X. Single-platform campaign = ceiling 10× lebih rendah dari multi-platform.',
+          'Case Jiera #7DaysChallenge — 360 Campaign in action: USP locked ("Lip Serum untuk perawatan, bukan instant color"). Kelemahan kategori: Lip Serum 2020 instant pink bikin bibir kering + gelap. KOL stack: nano beauty + customer real. Multi-platform: TikTok hashtag challenge + IG before/after + Twitter testimony. Output: 14.000+ user-generated post organic, 100.000.000 impresi dalam <1 tahun, 1jt pcs terjual. Lesson: campaign tematik dengan hashtag participatory > sekadar endorse satu-satu.',
+          'Campaign hashtag participatory mechanics: "#XDaysChallenge" format mengundang audience jadi co-creator. Step: (1) hero KOL launch challenge dengan demo before/after, (2) micro-KOL wave follow dalam 7 hari dengan modifikasi format, (3) UGC organic terstimulasi karena format low-friction (cukup pakai produk + post foto/video pakai hashtag). Result: 1 budget endorse menghasilkan 100-1000× content tanpa biaya tambahan.',
+        ],
+      },
+      {
+        n: '21',
+        title: 'KOL Performance Audit & ROI Math',
+        sub: 'Report post-endorsement + CPM/CPV decision matrix — re-hire, evaluate, atau drop',
+        tags: ['growth', 'fundamental'],
+        dur: '4 video · 50 mnt',
+        cs: 'Anonim brand skincare: dari 10 KOL endorse, 3 KOL CPV <Rp2/view (re-hire), 4 KOL CPV Rp5–10/view (evaluate), 3 KOL CPV >Rp10/view (drop). Total reach 340k views, average CPM Rp6.500. Benchmark observable: CPM endorsement nano-mid Rp3–8rb vs Meta Ads Rp15–35rb = endorse 3–5x lebih efisien per impression.',
+        del: 'Post-Endorsement Report Template (Excel/Sheets) + CPV-CPM Calculator + Re-Hire/Evaluate/Drop Decision Matrix + Endorse vs Meta Ads vs GMV Max Comparison Sheet + KOL Performance Database (rolling 90-hari)',
+        subs: [
+          'Wajib: setiap endorsement ada report. Kolom minimal: Akun, Kontak, Price, Tanggal Publish, Video Views (D+7), Cost Per View, CPM, ATC attributed, GMV attributed. Tanpa report = bakar duit blind',
+          'Rumus CPV (Cost Per View) = Price ÷ Views. Rumus CPM = (Price ÷ Views) × 1.000. CPV = berapa rupiah per 1 view. CPM = cost per mille (1.000 views) — standar industry untuk comparison cross-channel',
+          'Decision matrix Re-Hire / Evaluate / Drop: CPV <Rp3/view = Re-Hire (top tier, retainer worthy). CPV Rp3–8/view = Evaluate (cek brand fit + brief quality sebelum re-hire). CPV >Rp8/view = Drop (kecuali artis tier untuk awareness, bukan conversion)',
+          'Comparison CPM endorsement vs Meta Ads vs GMV Max — kapan endorse lebih murah. Benchmark Indonesia 2026: endorsement CC nano-mid CPM Rp3–8rb, Meta Ads CPM Rp15–35rb, GMV Max CPM Rp8–20rb. KOL nano CC = paling efisien per impression untuk top-funnel awareness',
+          'Hidden cost yang sering kelewat: PPh 21 KOL (5% atas penghasilan), ongkir sample, packaging gift box, retake fee kalau hasil video tidak sesuai brief, agency markup 20–30% kalau lewat MCN',
+          'Window measurement standar: D+7 dari publish = 80% total views udah masuk. D+14 = 95%. Setelah itu views plateau. Jangan judge endorsement <72 jam — bisa misleading',
+          'Rolling 90-day KOL Performance Database — track per KOL across multiple campaigns. Pattern detection: KOL yang consistent CPV <Rp3 = lock dengan retainer rate. KOL yang CPV inconsistent (kadang Rp2 kadang Rp15) = brief alignment issue, perlu re-train atau drop',
+        ],
+      },
+      {
+        n: '22',
         title: 'Promo, Voucher, Flash Sale — Yang Beneran vs Yang Bakar Margin',
         sub: 'Ikut kampanye dengan logic angka, bukan FOMO',
         tags: ['growth', 'fundamental'],
@@ -319,7 +383,7 @@ export const BL_PHASES = [
         ],
       },
       {
-        n: '20',
+        n: '23',
         title: 'Cross-Platform: Shopee vs TikTok — Mana Dulu, Kapan Dua-duanya',
         sub: 'Sequencing yang tidak overlap budget & konflik harga',
         tags: ['fundamental', 'growth'],
@@ -334,10 +398,10 @@ export const BL_PHASES = [
         ],
       },
       {
-        n: '21',
+        n: '24',
         title: 'CPAS Intro: Meta Ads × Shopee × Tokopedia untuk Brand yang Mau Scale',
         sub: 'Bridge antara Meta audience dan marketplace checkout — cara brand 300jt+ pakai diam-diam',
-        tags: ['ads', 'cpas'],
+        tags: ['ads', 'cpas', 'meta'],
         dur: '6 video · 80 mnt',
         del: 'CPAS Starter Checklist + Catalog Hygiene Template + Retargeting Audience Tier Sheet',
         subs: [
@@ -353,10 +417,10 @@ export const BL_PHASES = [
   },
   {
     n: '04',
-    title: 'Ops & Skala ke 100jt',
+    title: 'Sistem Skala 100jt',
     modules: [
       {
-        n: '22',
+        n: '25',
         title: 'Inventory Management: Dari Manual ke Sistem',
         sub: 'Stok real-time, reorder point, expiry alert',
         tags: ['ops'],
@@ -371,7 +435,7 @@ export const BL_PHASES = [
         ],
       },
       {
-        n: '23',
+        n: '26',
         title: 'Fulfillment: Packing Sendiri vs 3PL',
         sub: 'Patokan konkret kapan migrasi',
         tags: ['ops'],
@@ -386,7 +450,7 @@ export const BL_PHASES = [
         ],
       },
       {
-        n: '24',
+        n: '27',
         title: 'Customer Service yang Convert',
         sub: 'Response rate >95%, konversi chat 30%+, retur <5%',
         tags: ['ops'],
@@ -401,7 +465,7 @@ export const BL_PHASES = [
         ],
       },
       {
-        n: '25',
+        n: '28',
         title: 'Cashflow Bulanan: Stok, Iklan, Gaji',
         sub: 'Revenue 50jt tapi saldo 2jt? Ini yang perlu dibenahi',
         tags: ['fundamental', 'ops'],
@@ -416,7 +480,7 @@ export const BL_PHASES = [
         ],
       },
       {
-        n: '26',
+        n: '29',
         title: 'Tim Pertama: Admin, Packer, atau Content Creator Duluan?',
         sub: 'Hire yang menghasilkan, bukan yang bikin nyaman',
         tags: ['ops'],
@@ -432,7 +496,7 @@ export const BL_PHASES = [
         ],
       },
       {
-        n: '27',
+        n: '30',
         title: 'Dashboard Mingguan: 10 Metrik yang Owner Harus Cek',
         sub: 'Decision based on angka, bukan feeling',
         tags: ['fundamental', 'ops'],
@@ -447,14 +511,14 @@ export const BL_PHASES = [
         ],
       },
       {
-        n: '28',
+        n: '31',
         title: 'Roadmap 50jt → 500jt: Apa yang Harus Berubah',
         sub: 'Lompatan struktural menuju 500jt — bukan sekadar double effort',
         tags: ['fundamental', 'growth'],
         dur: '4 video · 55 mnt',
         del: '100M Readiness Checklist + 90-Day Sprint Plan',
         subs: [
-          'Audit kesiapan: profit konsisten 3 bulan? Ops jalan tanpa lo 2 minggu? HPP akurat?',
+          'Audit kesiapan: profit konsisten 3 bulan? Ops jalan tanpa kamu 2 minggu? HPP akurat?',
           'Skill yang perlu di-acquire: transisi dari operator jadi owner',
           'Modal yang dibutuhkan per kategori untuk lompat ke 100jt',
           'Multi-SKU expansion: kapan launch SKU ke-2 dan ke-3 tanpa scattered',
@@ -489,7 +553,7 @@ export const PM_CLUSTERS = [
       {
         n: '03',
         title: 'Hero Product Doctrine',
-        sub: '1 SKU yang bawa brand lo ke 1M+/bln',
+        sub: '1 SKU yang bawa brand kamu ke 1M+/bln',
         tags: ['framework', 'strategic'],
         dur: '5 video · 85 mnt',
         cs: 'Somethinc Hyaluron Serum, Erigo Hoodie, Wardah Lightening Series',
@@ -522,7 +586,7 @@ export const PM_CLUSTERS = [
       {
         n: '05',
         title: 'Penetration Pricing vs Premium Pricing',
-        sub: 'Pilih lane lo dan konsisten — jangan coba semua',
+        sub: 'Pilih lane kamu dan konsisten — jangan coba semua',
         tags: ['framework', 'strategic'],
         dur: '5 video · 80 mnt',
         cs: 'Skintific (Rp 60–100rb) vs Avoskin (Rp 100–250rb) vs ESQA (Rp 200–400rb)',
@@ -590,7 +654,7 @@ export const PM_CLUSTERS = [
           'Schedule optimization: peak hours Indonesia (sore–malam) + early bird (pagi) strategy',
           'Content engineering per shift: opening promo → demo → peak closing flash sale',
           'Live operations team structure: live director, switcher, runner, CS standby real-time',
-          'AI host & avatar: AnyMind deploy di Indonesia 2025 — kapan relevant untuk brand lo',
+          'AI host & avatar: AnyMind deploy di Indonesia 2025 — kapan relevant untuk brand kamu',
         ],
       },
       {
@@ -642,6 +706,25 @@ export const PM_CLUSTERS = [
           'Anomali alert system: Slack/WA notifikasi otomatis saat metrik turun >threshold',
         ],
       },
+      {
+        n: '15',
+        title: 'Commercial 2.0: EGC Engine & Beyond-KOL Stack',
+        sub: 'KOL generic sunset — Internal Content Engine + UGC Fabricated + AI Persona sebagai new distribution layer',
+        tags: ['framework', 'content-multiplication', 'strategic'],
+        dur: '8 video · 145 mnt',
+        cs: 'Whiteinc UGC "cowok dikosan cewek" = 90 juta impresi single campaign series. Facetology Interview format = ratusan juta impresi/bulan konsisten. Facetology EGC tim internal @tiana.a00 = 358.6K likes, 30 video bulan pertama, 1 video tembus 1.2M views — proof 1 staff non-creator = 10jt impresi/bulan free. Math kolektif: 100 staff × 500.000 impresi/bln (konservatif) = 50.000.000 impresi/bln gratis. Reference AI persona: @sehatdanbahagia98 (55.7k followers, 539k likes) = AI Dokter podcast/edukasi credible.',
+        del: 'EGC Engine Playbook + 100-Staff Activation Sequence + UGC Fabricated Risk Sheet + AI Persona Setup Guide (Bikin.video + HeyGen + Synthesia) + Internal Creator Compensation Calculator + Org Structure Shift Template (HR Recruitment + KPI Adjustment) + Content Velocity Math Calculator (Cost-per-Impresi Comparison vs KOL Paid)',
+        subs: [
+          'Thesis "KOL is Dying" — context pergeseran 2024-2026: industri KOL generic (yang nggak punya value, ngga punya level selebriti) bakal mati pelan-pelan. Audience makin pinter, nggak percaya followers banyak doang tanpa POV unik dan kredibel. Win-formula baru: performance ads + affiliate + EGC + UGC fabricated + AI content. KOL tetap dibutuhin TAPI cuma untuk awareness + brand association level selebriti — bukan generic mid-tier.',
+          'EGC (Employee Generated Content) Engine math — case Facetology: 1 akun staff (@tiana.a00, non-creator background) generate 358.6K likes total + 30 video bulan pertama. Top video tembus 1.2M views. Konservatif assumption: 1 staff = 500.000 impresi/bulan (lower bound) sampai 10.000.000 (upper bound). 100 staff × 500k = 50.000.000 impresi/bln free distribution. Ini ratusan kali lebih efisien dari KOL paid budget equivalent.',
+          'UGC Fabricated Strategy (grey-zone disclosure) — modul ini dibahas blunt, bukan endorse. Brand sekarang banyak pake 5-20 akun kecil "fabricated" (akun yang di-set seolah-olah customer organic, padahal di-orchestrate brand). Karakteristik: konten POV unik, bahasa casual, tidak tampak komersial, lempar isu/trend brand secara natural. Lebih murah lebih cepat lebih scalable dari KOL paid. Risk: TikTok enforcement naik 340% YoY 2025-2026, shadowban kalau detected coordinated. Mitigation: spread akun beda device/IP, signature konten beda per akun, tidak link langsung ke brand di awal.',
+          'Whiteinc Case Study — 90 juta impresi UGC single campaign: format "cowok dikosan cewek" = realitas relatable + setting natural + product placement subtle (terlihat di background, bukan di-hero-kan). Mekanika: tema bisa di-replicate cross-product (asalkan setting relatable + product organik appear). Per series 3 video pendek bisa tembus 70-130jt views. Lesson untuk brand kamu: stop mikir "gimana cara show produk" — mulai mikir "apa setting realitas yang relatable, dan produk kami bisa appear natural di setting itu".',
+          'Facetology Interview Format scaling — ratusan juta impresi/bulan konsisten via format interview street content. Karakteristik format: 1 interviewer + subject random + topic provocative (kualitas hidup, gaya hidup, tren) + branding tipis (logo product subtle, mention di akhir). Cost rendah: 1 produser + 1 host + 1 cameraman + 1 editor = 4 orang internal. Output: 60+ video/bulan, total 100-300jt views. Format ini scalable cross-brand karena talent interviewer-nya yang jadi engine, bukan produknya.',
+          'AI Content Stack 2026 — TikTok AI Persona sebagai layer distribusi tambahan. Reference: @sehatdanbahagia98 (55.7k followers, 539K likes) = AI Karakter Dokter podcast + edukasi kecantikan, credible enough audience think "dokter beneran". Tools stack: Bikin.video (AI Indonesia, persona local), HeyGen (English/Multi-language, avatar premium), Synthesia (corporate-grade), ElevenLabs (voice cloning). Setup: 1 akun TikTok dengan etalase keranjang kuning brand, output 2 konten/hari, target 10jt impresi/akun/bulan. Multi-brand: 1 akun AI bisa cover multiple brand (sehatdanbahagia model — bukan brand-specific tapi topic-specific).',
+          'Org Structure Shift — wajib kalau mau EGC scaling beneran jalan: (1) HR/Recruitment fokus rekrut staff yang welcome di-train jadi creator. Junior level (entry): 20-30% jam kerja wajib jadi creator output. (2) KPI EGC masuk performance review semua staff Commercial 2.0 — bukan optional, bukan bonus, tapi wajib. (3) Studio mini in-office: ring light + backdrop + tripod = setup 1jt/workstation, 5 workstation = <5jt. (4) Editor in-house 1-2 orang handle 30-50 staff creator output. (5) Brief library reusable + content angle assignment per persona staff. Reality: setup cost EGC engine Rp10-30jt, ongoing biaya 0 (staff jam kerja kontrak). Cost per impresi: 90%+ lebih murah dari KOL paid.',
+          'Commercial 2.0 Transformation Pillars (org-wide framework): (1) Market Leadership — own category, hero SKU focus, category switch ketika kategori jenuh. (2) Science & R&D — NPD hero-based, pipeline product 6-12 bulan ke depan, bukan ad-hoc. (3) Impactful Brand Reputation — viral IP + UGC + interview content sebagai demand creation engine. (4) Digital & AI Enablement — VV ATM (View Volume Above The Mean), calibration, forecasting via data. (5) Operational Excellence — ROMI >10, Marketing Cost ratio 10%, margin per platform di-track per SKU. (6) Org & Culture Accountability — weekly data report, tiap angka ada owner-nya (no orphan metric). KOL is dying = bukan KOL dihilangkan, tapi posisi KOL dalam stack di-recalibrate. KOL tetap dipake — tapi cuma untuk awareness + brand association level selebriti, BUKAN untuk volume generic distribusi.',
+        ],
+      },
     ],
   },
   {
@@ -651,7 +734,7 @@ export const PM_CLUSTERS = [
       {
         n: '12',
         title: 'Org Chart 5–50 Orang',
-        sub: 'Struktur yang match dengan stage revenue lo',
+        sub: 'Struktur yang match dengan stage revenue kamu',
         tags: ['team', 'framework'],
         dur: '6 video · 100 mnt',
         cs: 'Erigo team structure, Somethinc/BeautyHaul 200 brand operator model',
@@ -667,7 +750,7 @@ export const PM_CLUSTERS = [
       },
       {
         n: '13',
-        title: 'Middle Management: Bangun Manager Pertama Lo',
+        title: 'Middle Management: Bangun Manager Pertama Kamu',
         sub: 'Dari semua keputusan di founder ke divisi yang autopilot',
         tags: ['team', 'framework'],
         dur: '5 video · 85 mnt',
@@ -821,7 +904,7 @@ export const PM_CLUSTERS = [
           'Platform comparison: Shopify vs WordPress/WooCommerce vs Sirclo (lokal) — economics',
           'Traffic strategy D2C Indonesia: Meta Ads, Google Ads, SEO, owned WA Blast',
           'Payment & logistics: Midtrans/Xendit + J&T/JNE COD via 3PL',
-          'CRM advantage dari D2C: 1st party data yang tidak bisa lo dapat dari marketplace',
+          'CRM advantage dari D2C: 1st party data yang tidak bisa kamu dapat dari marketplace',
           'Multi-channel sequencing: MP untuk akuisisi baru, D2C untuk repeat customer',
           'Reality check: 5–15% revenue D2C adalah normal brand Indonesia — bukan 50%+',
         ],
@@ -948,7 +1031,7 @@ export const WR_CLUSTERS = [
         ],
       },
       {
-        n: '03',
+        n: '02',
         title: 'Affiliate Army at Scale: 1000+ Kreator, 1 Funnel',
         sub: 'Dari 18% activation ke 40%+ — Bronze/Silver/Gold tier system',
         tags: ['affiliate', 'tactical'],
@@ -970,7 +1053,7 @@ export const WR_CLUSTERS = [
         ],
       },
       {
-        n: '04',
+        n: '03',
         title: 'Internal Affiliate System: Pabrik Kreator In-House',
         sub: 'Build your own army — kontrol penuh, brand voice konsisten',
         tags: ['affiliate', 'internal-team'],
@@ -997,7 +1080,7 @@ export const WR_CLUSTERS = [
     title: 'Traffic Hacking & Viral Launch',
     modules: [
       {
-        n: '05',
+        n: '04',
         title: 'Clipper System: Content Multiplication Engine',
         sub: '1 konten jadi 150 distribusi — Hormozi playbook untuk e-commerce Indonesia',
         tags: ['clipper', 'content-multiplication'],
@@ -1018,7 +1101,7 @@ export const WR_CLUSTERS = [
         ],
       },
       {
-        n: '06',
+        n: '05',
         title: 'Buzzer & Engagement Pod: Grey Zone, Blak-Blakan',
         sub: 'Risk assessment jujur + white-hat alternative yang sama efektif',
         tags: ['grey-area', 'traffic-hacking'],
@@ -1039,7 +1122,7 @@ export const WR_CLUSTERS = [
         ],
       },
       {
-        n: '07',
+        n: '06',
         title: 'Campaign Viral: Launch SKU Trending dari Day 1',
         sub: 'Pre-launch 30 hari → Day 1 blow-out → 7-day post-optimization',
         tags: ['viral', 'launch', 'tactical'],
@@ -1060,7 +1143,7 @@ export const WR_CLUSTERS = [
         ],
       },
       {
-        n: '08',
+        n: '07',
         title: 'Kill Product Protocol: Matiin SKU Tanpa Rusak Brand',
         sub: 'Decision matrix + 90-day phase-out — keberanian kill setajam keberanian launch',
         tags: ['tactical', 'lifecycle'],
@@ -1087,10 +1170,10 @@ export const WR_CLUSTERS = [
     title: 'Ads Mastery — GMV Max, Shopee & CPAS',
     modules: [
       {
-        n: '09',
+        n: '08',
         title: 'GMV Max Decoded: Hidden Settings & Anti-Boncos Protocol',
         sub: 'Mandatory per Juli 2025 — satu-satunya format TikTok Ads. Kuasai atau bakar duit.',
-        tags: ['ads', 'gmv-max', 'anti-boncos'],
+        tags: ['ads', 'gmv-max', 'anti-boncos', 'hacks'],
         dur: '12 video · 240 mnt',
         cs: 'Garoblogz Q3 2025: rata-rata seller "lempar 7 hasil 3-5". Sakura Baru LIVE GMV Max: +53.8% GMV uplift, 9.6× ROI (TikTok official case). Brand kosmetik boncos Rp80jt/bln dari default ROI.',
         del: 'Target ROI Anti-Boncos Calculator + 4-Hour Rule Monitoring Sheet + Bulk Creative Exclusion Audit + ROI Protection Eligibility Checklist + Multi-Account Split Diagram + External Ledger Pembukuan Template',
@@ -1110,7 +1193,7 @@ export const WR_CLUSTERS = [
         ],
       },
       {
-        n: '10',
+        n: '09',
         title: 'Shopee Ads Stacking: Search × Discovery × Live × Ad Groups',
         sub: '4-layer stack + budget allocation rasional — yang brand top-10 lakuin',
         tags: ['ads', 'shopee', 'tactical'],
@@ -1131,7 +1214,7 @@ export const WR_CLUSTERS = [
         ],
       },
       {
-        n: '11',
+        n: '10',
         title: 'CPAS Hacks: Collaborative Ads yang ROAS 10x',
         sub: 'Meta × Shopee × Tokopedia — bridge yang brand 1M+ pakai diam-diam',
         tags: ['ads', 'cpas', 'attribution'],
@@ -1158,10 +1241,10 @@ export const WR_CLUSTERS = [
     title: 'Live Commerce & AM Negotiation',
     modules: [
       {
-        n: '12',
+        n: '11',
         title: 'Live Commerce Engineering: Anatomy 60 Menit yang Convert',
         sub: 'Menit-per-menit cue sheet, KPI per host, LIVE GMV Max integration',
-        tags: ['live', 'tactical'],
+        tags: ['live', 'tactical', 'engineering'],
         dur: '12 video · 220 mnt',
         cs: 'Tanah Abang fashion seller: 16 jam/hari, multi-host 8-person rotation. Xiaomi Indonesia: Rp63M Livestream income/bln (Kalodata). Brand kosmetik viral: 24-hour non-stop launch.',
         del: 'Live 60-Mnt Cue Sheet Template + Host KPI Tracker + Multi-Host Rotation Calendar (8-hour) + Studio Setup Spec Sheet Tier 1&2 + Backstage Roles SOP + Post-Live Retargeting Playbook (2-hour window) + AI Host Decision Tree',
@@ -1181,7 +1264,7 @@ export const WR_CLUSTERS = [
         ],
       },
       {
-        n: '13',
+        n: '12',
         title: 'AM Playbook Insider: Negosiasi dengan Shopee & TikTok AM',
         sub: 'Voucher subsidy Rp200M+, beta feature, crisis mediation — yang operator senior lakuin diam-diam',
         tags: ['negotiation', 'am-relationship', 'insider'],
@@ -1208,11 +1291,11 @@ export const WR_CLUSTERS = [
 // Cross-referenced K2 modules that also matter for K3 (War Room)
 export const WR_CROSSOVER = [
   { n: '01', from: 'Playmaker Room · Cluster 1 · Growth Strategy', title: 'Strategi Banjir: Decode Cara Brand China Mendominasi', sub: 'Context layer untuk KOL 360° + Affiliate Army — foundational sebelum taktik War Room', tag: 'framework / case-study', dur: '5 video · 90 mnt' },
-  { n: '03', from: 'Playmaker Room · Cluster 1 · Growth Strategy', title: 'Audience Laddering & GMV Max Advanced', sub: 'Strategic framework sebelum GMV Max Decoded in-depth di War Room', tag: 'framework / case-study', dur: '6 video · 110 mnt' },
-  { n: '06', from: 'Playmaker Room · Cluster 2 · Platform Mastery', title: 'KOL System at Scale: 100 → 1000+ Affiliator', sub: 'Strategic layer untuk KOL 360° + Affiliate Army — War Room masuk ke tactical-level', tag: 'framework / ops-scaling', dur: '7 video · 120 mnt' },
-  { n: '07', from: 'Playmaker Room · Cluster 2 · Platform Mastery', title: 'Live Commerce Empire', sub: 'Framework strategic sebelum Live Engineering menit-per-menit di War Room', tag: 'framework / ops-scaling', dur: '7 video · 130 mnt' },
-  { n: '08', from: 'Playmaker Room · Cluster 2 · Platform Mastery', title: 'Negosiasi dengan Account Manager Shopee & TikTok', sub: 'Framework negosiasi strategic — War Room masuk ke insider script + tactical detail', tag: 'framework / negotiation', dur: '5 video · 80 mnt' },
-  { n: '09', from: 'Playmaker Room · Cluster 2 · Platform Mastery', title: 'Multi-Marketplace Stack Tanpa Saling Bunuh', sub: 'Context multi-channel — War Room fokus tactical TikTok + Shopee saja', tag: 'framework / ops-scaling', dur: '6 video · 95 mnt' },
+  { n: '04', from: 'Playmaker Room · Cluster 1 · Growth Strategy', title: 'Audience Laddering & GMV Max Advanced', sub: 'Strategic framework sebelum GMV Max Decoded in-depth di War Room', tag: 'framework / case-study', dur: '6 video · 110 mnt' },
+  { n: '07', from: 'Playmaker Room · Cluster 2 · Platform Mastery', title: 'KOL System at Scale: 100 → 1000+ Affiliator', sub: 'Strategic layer untuk KOL 360° + Affiliate Army — War Room masuk ke tactical-level', tag: 'framework / ops-scaling', dur: '7 video · 120 mnt' },
+  { n: '08', from: 'Playmaker Room · Cluster 2 · Platform Mastery', title: 'Live Commerce Empire', sub: 'Framework strategic sebelum Live Engineering menit-per-menit di War Room', tag: 'framework / ops-scaling', dur: '7 video · 130 mnt' },
+  { n: '09', from: 'Playmaker Room · Cluster 2 · Platform Mastery', title: 'Negosiasi dengan Account Manager Shopee & TikTok', sub: 'Framework negosiasi strategic — War Room masuk ke insider script + tactical detail', tag: 'framework / negotiation', dur: '5 video · 80 mnt' },
+  { n: '10', from: 'Playmaker Room · Cluster 2 · Platform Mastery', title: 'Multi-Marketplace Stack Tanpa Saling Bunuh', sub: 'Context multi-channel — War Room fokus tactical TikTok + Shopee saja', tag: 'framework / ops-scaling', dur: '6 video · 95 mnt' },
 ];
 
 export const TIER_META = {
@@ -1226,7 +1309,7 @@ export const TIER_META = {
     format: 'LMS Sequential · Self-Paced',
     price: 'Rp 500 RB',
     accent: 'amber',
-    moduleCount: 28,
+    moduleCount: 31,
     structureLabel: '4 Fase',
     groupNoun: 'Fase',
   },
@@ -1241,7 +1324,7 @@ export const TIER_META = {
     price: 'Rp 2.5 JT',
     accent: 'gold',
     badge: 'Populer',
-    moduleCount: 25,
+    moduleCount: 26,
     structureLabel: '6 Cluster',
     groupNoun: 'Cluster',
   },
@@ -1274,6 +1357,8 @@ export const TAG_COLOR = {
   finance:               { bg: 'rgba(22,101,52,.10)',  c: '#166534' },
   team:                  { bg: 'rgba(91,58,75,.12)',   c: '#5B3A4B' },
   ads:                   { bg: 'rgba(200,131,12,.12)', c: '#9A5F08' },
+  tiktok:                { bg: 'rgba(185,28,28,.10)',  c: '#B91C1C' },
+  meta:                  { bg: 'rgba(30,58,138,.10)',  c: '#1E3A8A' },
   cpas:                  { bg: 'rgba(30,58,138,.10)',  c: '#1E3A8A' },
   'kol-360':             { bg: 'rgba(185,28,28,.10)',  c: '#B91C1C' },
   tactical:              { bg: 'rgba(185,28,28,.10)',  c: '#B91C1C' },
@@ -1288,9 +1373,11 @@ export const TAG_COLOR = {
   lifecycle:             { bg: 'rgba(91,58,75,.12)',   c: '#5B3A4B' },
   'gmv-max':             { bg: 'rgba(185,28,28,.10)',  c: '#B91C1C' },
   'anti-boncos':         { bg: 'rgba(122,44,44,.12)',  c: '#7A2C2C' },
+  hacks:                 { bg: 'rgba(185,28,28,.10)',  c: '#B91C1C' },
   shopee:                { bg: 'rgba(200,131,12,.12)', c: '#9A5F08' },
   attribution:           { bg: 'rgba(30,58,138,.10)',  c: '#1E3A8A' },
   live:                  { bg: 'rgba(30,58,138,.10)',  c: '#1E3A8A' },
+  engineering:           { bg: 'rgba(91,58,75,.12)',   c: '#5B3A4B' },
   negotiation:           { bg: 'rgba(30,58,138,.10)',  c: '#1E3A8A' },
   'am-relationship':     { bg: 'rgba(91,58,75,.12)',   c: '#5B3A4B' },
   insider:               { bg: 'rgba(185,28,28,.10)',  c: '#B91C1C' },

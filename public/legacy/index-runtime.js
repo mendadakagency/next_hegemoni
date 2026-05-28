@@ -17,10 +17,10 @@ try {
 /* LMS preview tab switcher + entry animations */
 (function(){
   var titles = {
-    dashboard: 'Hegemoni Academy \u00b7 Dashboard',
-    library:   'Hegemoni Academy \u00b7 Playbook Library',
-    live:      'Hegemoni Academy \u00b7 Live \u00b7 KOL Crack',
-    vault:     'Hegemoni Academy \u00b7 Case \u00b7 Brighty Q3 2025'
+    dashboard: 'The Playmakers \u00b7 Dashboard',
+    library:   'The Playmakers \u00b7 Playbook Library',
+    live:      'The Playmakers \u00b7 Live \u00b7 KOL Crack',
+    vault:     'The Playmakers \u00b7 Case \u00b7 Brighty Q3 2025'
   };
   var paths = {
     dashboard: '/dashboard',
@@ -503,83 +503,11 @@ try {
 } catch(e) { console.error('[hegemoni-runtime] block 7:', e); }
 })();
 
-/* ===== inline script #8 (IIFE-wrapped) ===== */
-(function(){
-try {
-
-/* v47: longer scroll-driven sink — progress completes after Differentiators has already taken over */
-(function(){
-  const logoSection = document.querySelector('.hero-kpi-marquee-shell');
-  const diffSection = document.querySelector('#program');
-  if(!logoSection || !diffSection) return;
-
-  logoSection.classList.add('ha-logo-sink-enabled');
-  diffSection.classList.add('ha-diff-takeover');
-
-  function clamp(v,min,max){ return Math.max(min, Math.min(max, v)); }
-
-  // smoother than linear, but not too fast like easeOutCubic
-  function easeInOutSine(t){
-    return -(Math.cos(Math.PI * t) - 1) / 2;
-  }
-
-  let ticking = false;
-
-  function update(){
-    ticking = false;
-
-    const vh = window.innerHeight || document.documentElement.clientHeight || 900;
-    const diffRect = diffSection.getBoundingClientRect();
-
-    /*
-      Before: finish point was too high, so logo sink felt done around 90%.
-      Now: starts earlier and finishes AFTER the Differentiators section has moved further up.
-    */
-    const start = vh * 1.12;
-    const end = -vh * 0.18;
-
-    const raw = clamp((start - diffRect.top) / (start - end), 0, 1);
-    const p = easeInOutSine(raw);
-
-    // Panel cover can lead slightly, but still doesn't complete too early.
-    const cover = clamp(raw * 1.04, 0, 1);
-
-    logoSection.style.setProperty('--ha-logo-sink', p.toFixed(4));
-    diffSection.style.setProperty('--ha-diff-in', p.toFixed(4));
-    diffSection.style.setProperty('--ha-panel-cover', cover.toFixed(4));
-
-    if(diffRect.top > start){
-      logoSection.style.setProperty('--ha-logo-sink', '0');
-      diffSection.style.setProperty('--ha-diff-in', '0');
-      diffSection.style.setProperty('--ha-panel-cover', '0');
-    }
-
-    if(diffRect.top < end){
-      logoSection.style.setProperty('--ha-logo-sink', '1');
-      diffSection.style.setProperty('--ha-diff-in', '1');
-      diffSection.style.setProperty('--ha-panel-cover', '1');
-    }
-  }
-
-  function requestUpdate(){
-    if(ticking) return;
-    ticking = true;
-    requestAnimationFrame(update);
-  }
-
-  window.addEventListener('scroll', requestUpdate, { passive:true });
-  window.addEventListener('resize', requestUpdate);
-  window.addEventListener('load', requestUpdate);
-
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', requestUpdate);
-  }else{
-    requestUpdate();
-  }
-})();
-
-} catch(e) { console.error('[hegemoni-runtime] block 8:', e); }
-})();
+/* ===== inline script #8 (DISABLED for perf) =====
+   Previously: scroll-driven "Apple sink" transition that updated
+   --ha-logo-sink CSS variable on every scroll/raf tick. Disabled
+   visually via CSS overrides — but JS still ran on every scroll
+   causing main-thread jank. Now neutralized entirely. */
 
 /* ===== inline script #9 (IIFE-wrapped) ===== */
 (function(){

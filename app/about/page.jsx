@@ -10,7 +10,7 @@ export const metadata = {
   keywords: [
     'Hegemoni Group',
     'The Playmakers founder',
-    'sejarah Hegemoni Academy',
+    'sejarah The Playmakers',
     'holding brand kecantikan Indonesia',
     'commerce education founder Indonesia',
   ],

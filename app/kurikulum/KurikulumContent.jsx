@@ -193,7 +193,7 @@ const TIER_JOURNEYS = [
     tier: '01', tierName: 'Brand Lab', aud: 'Pemula · 0–500jt/bln',
     currentN: '03', currentTitle: 'HPP Real, Bukan HPP Asumsi',
     currentTags: ['FUNDAMENTAL'], currentMeta: '4 video · 50 mnt',
-    progress: 32, total: 28, completed: 9,
+    progress: 29, total: 31, completed: 9,
     next: [
       { n: '04', title: 'Legal & Compliance Beres 7 Hari' },
       { n: '05', title: 'Setup Toko Shopee A–Z' },
@@ -205,7 +205,7 @@ const TIER_JOURNEYS = [
     tier: '02', tierName: 'Playmaker Room', aud: 'Mid · 500jt–10M/bln',
     currentN: '07', currentTitle: 'KOL System at Scale: 100 → 1000+',
     currentTags: ['CASE-STUDY', 'OPS-SCALING'], currentMeta: '7 video · 120 mnt',
-    progress: 64, total: 25, completed: 16,
+    progress: 62, total: 26, completed: 16,
     next: [
       { n: '08', title: 'Live Commerce Empire' },
       { n: '09', title: 'Negosiasi dengan AM Shopee' },
@@ -215,13 +215,13 @@ const TIER_JOURNEYS = [
   },
   {
     tier: '03', tierName: 'The War Room', aud: 'E-Commerce Specialist',
-    currentN: '09', currentTitle: 'GMV Max Decoded: Anti-Boncos',
+    currentN: '08', currentTitle: 'GMV Max Decoded: Anti-Boncos',
     currentTags: ['ADS', 'TACTICAL'], currentMeta: '12 video · 240 mnt',
-    progress: 78, total: 12, completed: 9,
+    progress: 67, total: 12, completed: 8,
     next: [
-      { n: '10', title: 'Shopee Ads 4-Layer Stacking' },
-      { n: '11', title: 'CPAS Hacks: ROAS 10x' },
-      { n: '12', title: 'Live Commerce Engineering' },
+      { n: '09', title: 'Shopee Ads 4-Layer Stacking' },
+      { n: '10', title: 'CPAS Hacks: ROAS 10x' },
+      { n: '11', title: 'Live Commerce Engineering' },
     ],
     accent: '#B91C1C', accentSoft: 'rgba(185,28,28,.18)',
   },
@@ -254,7 +254,7 @@ function JourneyMacbookMockup() {
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
           <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
         </span>
-        <span>Live · Hegemoni Academy Web</span>
+        <span>Live · The Playmakers Web</span>
       </div>
 
       <div className="k-laptop" style={{ '--accent': j.accent }}>
@@ -270,7 +270,7 @@ function JourneyMacbookMockup() {
               <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
               <path d="M7 11V7a5 5 0 0 1 10 0v4" />
             </svg>
-            <span>hegemoni.academy<span className="opacity-50">/journey</span></span>
+            <span>the.playmaker<span className="opacity-50">/journey</span></span>
           </div>
           <div className="k-laptop-chrome-actions">
             <span />
@@ -291,8 +291,8 @@ function JourneyMacbookMockup() {
                 <span className="text-white text-[11px] font-black">H</span>
               </div>
               <div>
-                <div className="text-white text-[10px] font-bold tracking-[0.15em]">HEGEMONI</div>
-                <div className="text-white/40 text-[7.5px] font-mono tracking-[0.2em]">ACADEMY</div>
+                <div className="text-white text-[10px] font-bold tracking-[0.15em]">THE</div>
+                <div className="text-white/40 text-[7.5px] font-mono tracking-[0.2em]">PLAYMAKERS</div>
               </div>
             </div>
 
@@ -321,7 +321,7 @@ function JourneyMacbookMockup() {
 
             <div className="mt-auto pt-4 border-t border-white/[0.06]">
               <div className="font-mono text-[8px] tracking-[2px] uppercase text-white/30 mb-1.5">Total</div>
-              <div className="text-white text-[18px] font-black leading-none">65 <span className="text-[10px] font-mono text-white/40">modul</span></div>
+              <div className="text-white text-[18px] font-black leading-none">69 <span className="text-[10px] font-mono text-white/40">modul</span></div>
             </div>
           </div>
 
@@ -442,13 +442,18 @@ function JourneyPhoneMockup() {
 
   return (
     <div className="k-phone-wrap">
-      {/* Top label */}
-      <div className="flex items-center gap-2 mb-3 font-mono text-[10px] tracking-[2.5px] uppercase text-paper/40">
-        <span className="relative flex h-2 w-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-        </span>
-        <span>Live · Journey App</span>
+      {/* Top label — Preview the App */}
+      <div className="flex flex-col items-center gap-3 mb-6 mt-4">
+        <div className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-paper/[0.04] border border-paper/10">
+          <span className="relative flex h-2.5 w-2.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+          </span>
+          <span className="font-mono text-[11px] tracking-[2.5px] uppercase text-paper/75 font-semibold">Live · Journey App</span>
+        </div>
+        <p className="text-[13px] text-paper/55 text-center max-w-[260px] leading-snug">
+          Preview cara cohort kamu navigate tier-by-tier
+        </p>
       </div>
 
       <div className="k-phone" style={{ '--accent': j.accent }}>
@@ -797,56 +802,48 @@ export default function KurikulumContent() {
     <main className="bg-ink text-paper overflow-x-hidden">
 
       {/* ══ HERO ══ */}
-      <section className="k-grid-dark relative min-h-[70vh] sm:min-h-[82vh] flex flex-col overflow-hidden px-6 sm:px-10 lg:px-20 pt-10 sm:pt-14 lg:pt-20 pb-10">
+      <section className="k-grid-dark relative min-h-[60vh] sm:min-h-[2vh] flex flex-col overflow-hidden px-6 sm:px-10 lg:px-20 pt-6 sm:pt-14 lg:pt-15 pb-10 sm:pb-10">
         <Aurora orbs={[
           { a: 1, w: '800px', h: '800px', g: 'radial-gradient(circle,rgba(200,131,12,.35),transparent 65%)', t: '-25%', l: '-15%' },
           { a: 2, w: '600px', h: '600px', g: 'radial-gradient(circle,rgba(185,28,28,.22),transparent 65%)', t: '5%',   r: '-10%' },
           { a: 3, w: '700px', h: '500px', g: 'radial-gradient(circle,rgba(30,58,138,.25),transparent 65%)',  b: '-15%', l: '25%'  },
           { a: 4, w: '400px', h: '400px', g: 'radial-gradient(circle,rgba(91,58,75,.2),transparent 65%)',    t: '40%',  r: '20%'  },
+          { a: 2, w: '500px', h: '500px', g: 'radial-gradient(circle,rgba(200,131,12,.18),transparent 60%)', t: '45%',  l: '-15%' },
+          { a: 3, w: '450px', h: '450px', g: 'radial-gradient(circle,rgba(154,95,8,.14),transparent 60%)',   t: '60%',  l: '5%'   },
         ]}/>
 
-        <div className="relative z-10 grid xl:grid-cols-[minmax(0,600px)_minmax(0,1fr)] gap-10 xl:gap-12 items-start flex-1">
+        <div className="relative z-10 grid xl:grid-cols-[minmax(0,5fr)_minmax(0,8fr)] gap-10 xl:gap-12 items-stretch flex-1">
           {/* Left — copy */}
-          <div className="max-w-[600px]">
-            <p className="k-fu-1 font-mono text-[10px] tracking-[3.5px] uppercase text-gold font-medium mb-7">
-              10 · Curriculum Map V1 · 2026
+          <div className="flex flex-col">
+            <p className="k-fu-1 font-mono text-[11.5px] sm:text-[10px] tracking-[2px] sm:tracking-[3.5px] uppercase text-paper/65 font-semibold sm:font-medium mb-7 sm:mb-7">
+              <span className="text-gold mr-1.5">10</span>· Curriculum Map V1 · 2026
             </p>
-            <h1 className="k-fu-2 font-black text-[clamp(52px,8vw,100px)] leading-[0.9] tracking-[-0.04em] uppercase">
-              65 Modul.
-              <em className="block not-italic font-extrabold italic text-gold normal-case tracking-[-0.03em] text-[0.82em] mt-1">
-                Tiga Tier. Satu Platform.
+            <h1 className="k-fu-2 font-black text-[clamp(32px,6.5vw,130px)] leading-[0.9] tracking-[-0.04em] uppercase mb-5 sm:mb-5">
+              69 Modul.
+              <em className="block not-italic font-extrabold italic text-gold normal-case tracking-[-0.03em] text-[0.72em] mt-1">
+                Tiga Tier.<br/>Satu Platform.
               </em>
             </h1>
 
-            <div className="k-fu-3 flex items-center gap-5 my-10 max-w-[420px]">
-              <span className="flex-1 h-px bg-gradient-to-r from-gold/40 to-paper/5" />
-              <span className="w-[5px] h-[5px] rounded-full bg-gold shadow-[0_0_12px_rgba(200,131,12,0.6)]" />
-              <span className="font-mono text-[9px] tracking-[3px] uppercase text-paper/35 whitespace-nowrap">
-                Built, Not Theorized.
-              </span>
-              <span className="w-[5px] h-[5px] rounded-full bg-gold shadow-[0_0_12px_rgba(200,131,12,0.6)]" />
-              <span className="flex-1 h-px bg-gradient-to-r from-paper/5 to-gold/40" />
-            </div>
-
-            <p className="k-fu-4 text-base leading-[1.85] text-paper/50 max-w-[540px] mb-11">
-              Long-list kurikulum 3 tier: Brand Lab (foundational, sequential, 0–500jt/bln —
+            <p className="k-fu-4 text-[13px] sm:text-[clamp(14px,1vw,17px)] leading-[1.7] text-paper/55 max-w-[540px] mb-6 sm:mb-11 text-pretty sm:mt-5">
+              Long-list kurikulum 3 tier: <strong className="text-paper/90 font-semibold">Brand Lab</strong> (foundational, sequential, 0–500jt/bln —
               termasuk Tim Ideal, TikTok Ads Manager ekosistem + CPAS intro · 4 modul akses gratis),
-              Playmaker Room (strategic multi-channel, free-pick, 500jt–10M/bln), dan The War Room
+              <strong className="text-paper/90 font-semibold"> Playmaker Room</strong> (strategic multi-channel, free-pick, 500jt–10M/bln), dan <strong className="text-paper/90 font-semibold">The War Room</strong>
               (tactical e-commerce specialist — TikTok Shop × Shopee deep ops, 12 modul in-depth).
             </p>
 
-            <div className="k-fu-5 flex flex-wrap gap-3.5">
-              <a href="#overview" className="inline-flex items-center gap-2.5 bg-gold text-ink px-9 py-4 rounded font-mono text-[11px] tracking-[1.5px] uppercase font-medium hover:bg-amber hover:-translate-y-[3px] hover:shadow-[0_14px_44px_rgba(200,131,12,0.35)] transition-all duration-300">
+            <div className="k-fu-5 flex flex-wrap gap-3">
+              <a href="#overview" className="inline-flex items-center gap-2.5 bg-gold text-ink px-7 py-3.5 sm:px-9 sm:py-4 rounded font-mono text-[11px] tracking-[1.5px] uppercase font-medium hover:bg-amber hover:-translate-y-[3px] hover:shadow-[0_14px_44px_rgba(200,131,12,0.35)] transition-all duration-300">
                 Lihat Kurikulum →
               </a>
-              <a href="https://wa.me/6281234567890" className="inline-flex items-center bg-transparent text-paper/55 border border-paper/10 px-7 py-4 rounded text-[13px] font-medium hover:border-paper/40 hover:text-paper hover:bg-paper/5 transition-all duration-300">
+              <a href="https://wa.me/6281234567890" className="inline-flex items-center bg-transparent text-paper/75 border border-paper/25 px-6 py-3.5 sm:px-7 sm:py-4 rounded text-[13px] font-medium hover:border-paper/50 hover:text-paper hover:bg-paper/5 transition-all duration-300">
                 Hubungi Tim
               </a>
             </div>
           </div>
 
           {/* Right (desktop xl+) — Macbook browser mockup */}
-          <div className="hidden xl:flex justify-center items-start w-full k-fu-4">
+          <div className="hidden xl:flex flex-col items-center w-full k-fu-4">
             <JourneyMacbookMockup />
           </div>
 
@@ -858,16 +855,16 @@ export default function KurikulumContent() {
       </section>
 
       {/* ══ STATS BAR ══ */}
-      <div className="k-reveal m-6 sm:m-10 lg:m-20 grid grid-cols-2 sm:grid-cols-4 rounded-[10px] border border-paper/5 overflow-hidden bg-carbon/60 backdrop-blur-md relative z-[2]">
+      <div className="k-reveal m-6 sm:m-10 lg:m-20 grid grid-cols-4 rounded-[10px] border border-paper/5 overflow-hidden bg-carbon/60 backdrop-blur-md relative z-[2]">
         {[
-          ['28', 'Brand Lab',       true],
-          ['25', 'Playmaker Room',  false],
+          ['31', 'Brand Lab',       true],
+          ['26', 'Playmaker Room',  false],
           ['12', 'The War Room',    false],
           ['75', 'Templates & Tools', false],
         ].map(([v, l, gold], i) => (
-          <div key={i} className="text-center py-8 px-4 border-r border-paper/5 last:border-r-0 hover:bg-gold/[0.06] transition-all duration-300">
-            <div data-count={v} className={`font-black text-[clamp(28px,3.5vw,48px)] leading-[0.9] tracking-[-1px] ${gold ? 'text-gold' : 'text-paper'}`}>0</div>
-            <div className="font-mono text-[9px] tracking-[2px] text-paper/25 mt-2.5 uppercase">{l}</div>
+          <div key={i} className="text-center py-5 px-2 sm:py-8 sm:px-4 border-r border-paper/5 last:border-r-0 hover:bg-gold/[0.06] transition-all duration-300">
+            <div data-count={v} className={`font-black text-[clamp(20px,3.5vw,48px)] leading-[0.9] tracking-[-1px] ${gold ? 'text-gold' : 'text-paper'}`}>0</div>
+            <div className="font-mono text-[7px] sm:text-[9px] tracking-[1.5px] sm:tracking-[2px] text-paper/25 mt-1.5 sm:mt-2.5 uppercase leading-tight">{l}</div>
           </div>
         ))}
       </div>
@@ -880,7 +877,7 @@ export default function KurikulumContent() {
         ]}/>
         <div className="relative z-10 k-reveal">
           <SectionLabel>01 · Kurikulum</SectionLabel>
-          <SectionTitle main="PILIH TIER" em="Sesuai Stage Bisnis Lo." dark />
+          <SectionTitle main="PILIH TIER" em="Sesuai Stage Bisnis Kamu." dark />
           <p className="text-[15px] leading-[1.8] text-paper/45 max-w-[560px] mt-4">
             Setiap tier punya kurikulum, struktur, faculty access, dan komunitas yang di-differentiate.
             Bukan beda harga — beda level kedalaman, format delivery, dan outcome.
@@ -952,11 +949,19 @@ export default function KurikulumContent() {
             </p>
             <p className="mt-4 italic text-sm text-ink/30">{TIER_META.brandlab.tagline}</p>
           </div>
-          <div className="k-reveal k-d1 flex flex-col gap-4">
-            <div className="p-10 rounded-2xl text-center relative overflow-hidden bg-gradient-to-br from-white to-gold/5 border border-ink/5 shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
-              <div className="font-mono text-[9px] tracking-[2px] uppercase mb-2 text-amber">Mulai Dari</div>
-              <div className="font-black text-[52px] tracking-[-2px] leading-none text-ink">Rp 500<span className="text-xl font-bold"> RB</span></div>
-              <div className="text-[13px] mt-2.5 text-ink/45">Akses LMS lifetime · 4 modul gratis</div>
+          <div className="k-reveal k-d1 flex flex-col gap-5">
+            <div className="grid grid-cols-4 gap-2 sm:gap-3">
+              {[
+                ['31',  'Modul'],
+                ['157', 'Video'],
+                ['33',  'Jam Total'],
+                ['4',   'Fase'],
+              ].map(([v, l], i) => (
+                <div key={i} className="text-center py-4 px-2 sm:py-6 sm:px-3 rounded-lg bg-white border border-ink/[0.04] shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:border-gold/20 hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] transition-all duration-300">
+                  <div className="font-black text-[22px] sm:text-[32px] tracking-[-1px] leading-none text-amber">{v}</div>
+                  <div className="font-mono text-[7px] sm:text-[8px] tracking-[1.5px] sm:tracking-[2px] uppercase mt-1.5 sm:mt-2 text-ink/40">{l}</div>
+                </div>
+              ))}
             </div>
             <div className="flex gap-3 flex-wrap">
               <a href="#cta" className="inline-flex items-center gap-2.5 bg-ink text-paper px-9 py-4 rounded font-mono text-[11px] tracking-[1.5px] uppercase font-medium hover:-translate-y-[3px] hover:shadow-[0_14px_44px_rgba(0,0,0,0.3)] transition-all duration-300">
@@ -967,19 +972,6 @@ export default function KurikulumContent() {
               </a>
             </div>
           </div>
-        </div>
-
-        <div className="relative z-10 grid grid-cols-3 gap-3 mb-10 k-reveal">
-          {[
-            ['28',    'Modul'],
-            ['4',     'Fase'],
-            ['4',     'Modul Gratis'],
-          ].map(([v, l], i) => (
-            <div key={i} className="text-center py-5 px-3 rounded-lg bg-white border border-ink/[0.04] shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:border-gold/20 hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] transition-all duration-300">
-              <div className="font-black text-[28px] tracking-[-1px] leading-none text-amber">{v}</div>
-              <div className="font-mono text-[8px] tracking-[2px] uppercase mt-1.5 text-ink/40">{l}</div>
-            </div>
-          ))}
         </div>
 
         <div className="relative z-10 font-mono text-[9px] tracking-[3px] uppercase font-medium mb-2 text-amber k-reveal">Long-List Kurikulum · 4 Fase</div>
@@ -1025,11 +1017,19 @@ export default function KurikulumContent() {
             </p>
             <p className="mt-4 italic text-sm text-paper/40">{TIER_META.playmaker.tagline}</p>
           </div>
-          <div className="k-reveal k-d1 flex flex-col gap-4">
-            <div className="p-10 rounded-2xl text-center relative overflow-hidden bg-gradient-to-br from-gold/10 to-carbon/80 border border-gold/15">
-              <div className="font-mono text-[9px] tracking-[2px] uppercase mb-2 text-gold">Mulai Dari</div>
-              <div className="font-black text-[52px] tracking-[-2px] leading-none text-paper">Rp 2.5<span className="text-xl font-bold"> JT</span></div>
-              <div className="text-[13px] mt-2.5 text-paper/45">Per cohort · LMS + Live access</div>
+          <div className="k-reveal k-d1 flex flex-col gap-5">
+            <div className="grid grid-cols-4 gap-2 sm:gap-3">
+              {[
+                ['26',  'Modul'],
+                ['153', 'Video'],
+                ['44',  'Jam Total'],
+                ['6',   'Cluster'],
+              ].map(([v, l], i) => (
+                <div key={i} className="text-center py-4 px-2 sm:py-6 sm:px-3 rounded-lg bg-paper/[0.03] border border-paper/[0.04] hover:bg-gold/[0.06] hover:border-gold/15 transition-all duration-300">
+                  <div className="font-black text-[22px] sm:text-[32px] tracking-[-1px] leading-none text-gold">{v}</div>
+                  <div className="font-mono text-[7px] sm:text-[8px] tracking-[1.5px] sm:tracking-[2px] uppercase mt-1.5 sm:mt-2 text-paper/40">{l}</div>
+                </div>
+              ))}
             </div>
             <div className="flex gap-3 flex-wrap">
               <a href="#cta" className="inline-flex items-center gap-2.5 bg-gold text-ink px-9 py-4 rounded font-mono text-[11px] tracking-[1.5px] uppercase font-medium hover:bg-amber hover:-translate-y-[3px] hover:shadow-[0_14px_44px_rgba(200,131,12,0.35)] transition-all duration-300">
@@ -1040,19 +1040,6 @@ export default function KurikulumContent() {
               </a>
             </div>
           </div>
-        </div>
-
-        <div className="relative z-10 grid grid-cols-3 gap-3 mb-10 k-reveal">
-          {[
-            ['25',   'Modul'],
-            ['6',    'Cluster'],
-            ['Live', 'Monthly'],
-          ].map(([v, l], i) => (
-            <div key={i} className="text-center py-5 px-3 rounded-lg bg-paper/[0.03] border border-paper/[0.04] hover:bg-gold/[0.06] hover:border-gold/15 transition-all duration-300">
-              <div className="font-black text-[28px] tracking-[-1px] leading-none text-gold">{v}</div>
-              <div className="font-mono text-[8px] tracking-[2px] uppercase mt-1.5 text-paper/40">{l}</div>
-            </div>
-          ))}
         </div>
 
         <div className="relative z-10 font-mono text-[9px] tracking-[3px] uppercase font-medium mb-2 text-gold k-reveal">Long-List Kurikulum · 6 Cluster · Free-Pick</div>
@@ -1097,11 +1084,19 @@ export default function KurikulumContent() {
             </p>
             <p className="mt-4 italic text-sm text-ink/30">{TIER_META.warroom.tagline}</p>
           </div>
-          <div className="k-reveal k-d1 flex flex-col gap-4">
-            <div className="p-10 rounded-2xl text-center relative overflow-hidden bg-gradient-to-br from-crimson/5 to-white border border-crimson/10 shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
-              <div className="font-mono text-[9px] tracking-[2px] uppercase mb-2 text-crimson">Mulai Dari</div>
-              <div className="font-black text-[52px] tracking-[-2px] leading-none text-ink">Rp 8.5<span className="text-xl font-bold"> JT</span></div>
-              <div className="text-[13px] mt-2.5 text-ink/45">Per batch · Tactical add-on premium</div>
+          <div className="k-reveal k-d1 flex flex-col gap-5">
+            <div className="grid grid-cols-4 gap-2 sm:gap-3">
+              {[
+                ['12',  'Modul'],
+                ['121', 'Video'],
+                ['36',  'Jam Total'],
+                ['4',   'Cluster'],
+              ].map(([v, l], i) => (
+                <div key={i} className="text-center py-4 px-2 sm:py-6 sm:px-3 rounded-lg bg-white border border-ink/[0.04] shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:border-crimson/20 transition-all duration-300">
+                  <div className="font-black text-[22px] sm:text-[32px] tracking-[-1px] leading-none text-crimson">{v}</div>
+                  <div className="font-mono text-[7px] sm:text-[8px] tracking-[1.5px] sm:tracking-[2px] uppercase mt-1.5 sm:mt-2 text-ink/40">{l}</div>
+                </div>
+              ))}
             </div>
             <div className="flex gap-3 flex-wrap">
               <a href="#cta" className="inline-flex items-center gap-2.5 bg-crimson text-paper px-9 py-4 rounded font-mono text-[11px] tracking-[1.5px] uppercase font-medium hover:-translate-y-[3px] hover:shadow-[0_14px_44px_rgba(185,28,28,0.35)] transition-all duration-300">
@@ -1112,19 +1107,6 @@ export default function KurikulumContent() {
               </a>
             </div>
           </div>
-        </div>
-
-        <div className="relative z-10 grid grid-cols-3 gap-3 mb-10 k-reveal">
-          {[
-            ['12', 'Modul Tactical'],
-            ['4',  'Cluster'],
-            ['TS×SP', 'TikTok × Shopee'],
-          ].map(([v, l], i) => (
-            <div key={i} className="text-center py-5 px-3 rounded-lg bg-white border border-ink/[0.04] shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:border-crimson/20 transition-all duration-300">
-              <div className="font-black text-[28px] tracking-[-1px] leading-none text-crimson">{v}</div>
-              <div className="font-mono text-[8px] tracking-[2px] uppercase mt-1.5 text-ink/40">{l}</div>
-            </div>
-          ))}
         </div>
 
         <div className="relative z-10 font-mono text-[9px] tracking-[3px] uppercase font-medium mb-2 text-crimson k-reveal">Long-List Kurikulum · 4 Cluster Tactical</div>
@@ -1315,7 +1297,7 @@ export default function KurikulumContent() {
             <em className="block not-italic font-extrabold italic text-gold normal-case">Lock Seat Lo.</em>
           </div>
           <p className="text-base leading-[1.8] text-paper/45 max-w-[480px] mx-auto mb-10">
-            Brand Lab, Playmaker Room, atau The War Room — pilih sesuai stage operasional lo.
+            Brand Lab, Playmaker Room, atau The War Room — pilih sesuai stage operasional kamu.
             Built, not theorized. Practice in confidence.
           </p>
           <div className="flex gap-3.5 justify-center flex-wrap">
@@ -1332,7 +1314,7 @@ export default function KurikulumContent() {
       {/* ══ FOOTER ══ */}
       <footer className="bg-ink px-6 sm:px-10 lg:px-20 py-10 border-t border-paper/5">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-paper/20">
-          <div className="font-mono text-[10px] font-medium tracking-[2px] uppercase">Hegemoni Academy · Curriculum Map V1</div>
+          <div className="font-mono text-[10px] font-medium tracking-[2px] uppercase">The Playmakers · Curriculum Map V1</div>
           <div className="italic text-[13px] text-paper/20">Built, Not Theorized.</div>
           <div className="font-mono text-[10px] tracking-[1.5px]">© 2026</div>
         </div>

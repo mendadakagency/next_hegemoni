@@ -106,7 +106,7 @@ const HOME_BODY = `
         <div class="lms-traffic"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
         <div class="lms-tab">
           <svg viewBox="0 0 100 86" xmlns="http://www.w3.org/2000/svg"><path d="M6 84L50 4" stroke="#C8830C" stroke-width="10" stroke-linecap="butt" fill="none"></path><path d="M50 4L94 84" stroke="#C8830C" stroke-width="10" stroke-linecap="butt" fill="none"></path><path d="M26 84L26 42" stroke="#C8830C" stroke-width="9" stroke-linecap="butt" fill="none"></path><path d="M4 76 Q50 50 96 76" stroke="#C8830C" stroke-width="9" stroke-linecap="butt" fill="none"></path></svg>
-          <span class="tab-title" id="lmsTabTitle">Hegemoni Academy · Dashboard</span>
+          <span class="tab-title" id="lmsTabTitle">The Playmakers · Dashboard</span>
           <span class="tab-close">×</span>
         </div>
         <div class="lms-newtab">+</div>
@@ -118,7 +118,7 @@ const HOME_BODY = `
         <button class="nav-btn" type="button" aria-label="Refresh">â†º</button>
         <div class="lms-url">
           <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M8 1a3 3 0 0 0-3 3v3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1h-1V4a3 3 0 0 0-3-3Zm-2 6V4a2 2 0 1 1 4 0v3H6Z"></path></svg>
-          <span class="host">framework-playbook.hegemoniacademy.com</span><span class="path" id="lmsUrlPath">/dashboard</span>
+          <span class="host">framework-playbook.theplaymakers.id</span><span class="path" id="lmsUrlPath">/dashboard</span>
         </div>
       </div>
       <!-- Body -->
@@ -127,9 +127,9 @@ const HOME_BODY = `
         <aside class="lms-sidebar">
           <div class="lms-brand">
             <div class="lms-brand-logo">
-              <img src="/assets/images/6418663c-f0a8-404f-8d64-11b1be7b45fb.png" alt="Hegemoni Academy">
+              <img src="/assets/images/6418663c-f0a8-404f-8d64-11b1be7b45fb.png" alt="The Playmakers">
             </div>
-            <div class="lms-brand-text">HEGEMONI<small>ACADEMY</small></div>
+            <div class="lms-brand-text">THE<small>PLAYMAKERS</small></div>
           </div>
           <div class="lms-nav-label">Workspace</div>
           <button class="lms-nav-item active" type="button" data-lms-screen="dashboard">
@@ -467,7 +467,7 @@ const HOME_BODY = `
 <div class="reveal">
 <div class="sec-label">02 · Kurikulum</div>
 <div class="sec-title">THREE TIERS,<em>One Parent.</em></div>
-<p class="sec-desc">Hegemoni Academy = parent brand premium. Tiga sub-brand melayani tier audience yang berbeda — format delivery, harga, faculty access, dan community access semua di-differentiate.</p>
+<p class="sec-desc">The Playmakers = arm edukasi premium dari Hegemoni Group. Tiga sub-brand melayani tier audience yang berbeda — format delivery, harga, faculty access, dan community access semua di-differentiate.</p>
 </div>
 <div class="curr-grid" style="grid-template-columns:repeat(3,1fr)">
 <div class="curr-card reveal" style="border-top:3px solid var(--gold)"><div class="curr-num">SUB 01</div><div class="curr-title">Brand Lab</div><div class="curr-desc">LMS dasar, self-paced, recorded. Untuk owner brand early-stage yang masih bangun fondasi. Pemula &lt;50jt/bln.</div><div class="curr-meta" style="display:flex;flex-direction:column;gap:4px"><span>FORMAT · LMS Recorded</span><span>FACULTY · Async</span><span>CAPACITY · Unlimited</span></div></div>
@@ -629,7 +629,7 @@ const HOME_BODY = `
 <div class="sec-center reveal">
 <div class="sec-label imperial">04 · Investasi</div>
 <div class="sec-title">TIGA TIER.<em>Satu Parent.</em></div>
-<p class="sec-desc">Pilih program sesuai tier bisnis lo. Setiap tier punya format, faculty access, dan community yang di-differentiate — bukan cuma beda harga.</p>
+<p class="sec-desc">Pilih program sesuai tier bisnis kamu. Setiap tier punya format, faculty access, dan community yang di-differentiate — bukan cuma beda harga.</p>
 </div>
 <div class="price-grid">
 <div class="price-card reveal"><div class="price-tier">Brand Lab</div><div class="price-amount" style="font-size:28px;line-height:1.1"><sup style="font-size:14px">Mulai </sup>Rp 500<span style="font-size:18px"> RB</span></div><div class="price-feat" style="font-family:'Inter',system-ui,sans-serif;font-size:9px;letter-spacing:1.5px;color:var(--gold);margin-bottom:10px">PEMULA · &lt;50JT/BLN</div><div class="price-feat"><b>✓</b> LMS dasar — self-paced, recorded</div><div class="price-feat"><b>✓</b> Foundational setup &amp; execution</div><div class="price-feat"><b>✓</b> Akses materi lifetime</div><div class="price-feat"><b>✓</b> Community Brand Lab</div><div style="flex:1"></div><button class="price-btn" style="background:var(--sand);color:var(--ink)">Mulai Brand Lab →</button></div>
@@ -642,11 +642,11 @@ const HOME_BODY = `
 <div class="sec-label">05 · Community</div>
 <h2 class="social-heading">FROM THE ROOM<em>Apa yang playmaker bicarakan.</em></h2>
 <div class="social-ctas">
-<a class="social-btn ig" href="https://www.instagram.com/hegemoniacademy" target="_blank">
+<a class="social-btn ig" href="https://www.instagram.com/theplaymakers.id" target="_blank">
 <svg fill="currentColor" height="18" viewBox="0 0 24 24" width="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
         Follow di Instagram
       </a>
-<a class="social-btn tt" href="https://www.tiktok.com/@hegemoniacademy" target="_blank">
+<a class="social-btn tt" href="https://www.tiktok.com/@theplaymakers.id" target="_blank">
 <svg fill="currentColor" height="18" viewBox="0 0 24 24" width="16"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"></path></svg>
         Follow di TikTok
       </a>
@@ -657,7 +657,7 @@ const HOME_BODY = `
 <div class="social-card reveal sc-tall">
 <div class="sc-header">
 <div class="sc-avatar"></div>
-<div><div class="sc-name">hegemoniacademy</div><div class="sc-music">â™ª Hegemoni Academy</div></div>
+<div><div class="sc-name">theplaymakers.id</div><div class="sc-music">â™ª The Playmakers</div></div>
 <div class="sc-dots">···</div>
 </div>
 <div class="sc-body-tall" style="background-image:url(&quot;/assets/images/739a3de0-8970-4d56-8198-fc02141df45f.jpg&quot;);background-size:cover;background-position:center;position:relative">
@@ -671,7 +671,7 @@ const HOME_BODY = `
 <div class="social-card reveal">
 <div class="sc-header">
 <div class="sc-avatar"></div>
-<div><div class="sc-name">hegemoniacademy</div><div class="sc-music">â™ª Hegemoni Academy</div></div>
+<div><div class="sc-name">theplaymakers.id</div><div class="sc-music">â™ª The Playmakers</div></div>
 <div class="sc-dots">···</div>
 </div>
 <div class="sc-body" style="background-image:url(&quot;/assets/images/d282fef8-8b2e-458b-8144-a28d1582c0c8.jpg&quot;);background-size:cover;background-position:center;position:relative">
@@ -687,7 +687,7 @@ const HOME_BODY = `
 <div class="social-card reveal">
 <div class="sc-header">
 <div class="sc-avatar"></div>
-<div><div class="sc-name">hegemoniacademy</div><div class="sc-music">â™ª Hegemoni Academy</div></div>
+<div><div class="sc-name">theplaymakers.id</div><div class="sc-music">â™ª The Playmakers</div></div>
 <div class="sc-dots">···</div>
 </div>
 <div class="sc-body" style="background-image:url(&quot;/assets/images/1b135d6e-a365-4866-9827-235aed800ee3.jpg&quot;);background-size:cover;background-position:center;position:relative">
@@ -701,7 +701,7 @@ const HOME_BODY = `
 <div class="social-card reveal sc-tall">
 <div class="sc-header">
 <div class="sc-avatar"></div>
-<div><div class="sc-name">hegemoniacademy</div><div class="sc-music">â™ª Hegemoni Academy</div></div>
+<div><div class="sc-name">theplaymakers.id</div><div class="sc-music">â™ª The Playmakers</div></div>
 <div class="sc-dots">···</div>
 </div>
 <div class="sc-body-tall" style="background-image:url(&quot;/assets/images/ec9472fb-cf9b-4b05-ba8f-10272f7219ac.jpg&quot;);background-size:cover;background-position:center;position:relative">
@@ -715,7 +715,7 @@ const HOME_BODY = `
 <div class="social-card reveal">
 <div class="sc-header">
 <div class="sc-avatar"></div>
-<div><div class="sc-name">hegemoniacademy</div><div class="sc-music">â™ª Hegemoni Academy</div></div>
+<div><div class="sc-name">theplaymakers.id</div><div class="sc-music">â™ª The Playmakers</div></div>
 <div class="sc-dots">···</div>
 </div>
 <div class="sc-body" style="background-image:url(&quot;/assets/images/f14a6e51-c114-4a84-9b11-0066f39010c5.jpg&quot;);background-size:cover;background-position:center;position:relative">
@@ -731,7 +731,7 @@ const HOME_BODY = `
 <div class="social-card reveal sc-tall">
 <div class="sc-header">
 <div class="sc-avatar"></div>
-<div><div class="sc-name">hegemoniacademy</div><div class="sc-music">â™ª Hegemoni Academy</div></div>
+<div><div class="sc-name">theplaymakers.id</div><div class="sc-music">â™ª The Playmakers</div></div>
 <div class="sc-dots">···</div>
 </div>
 <div class="sc-body-tall" style="background-image:var(--di1);background-size:cover;background-position:center;position:relative">
@@ -745,7 +745,7 @@ const HOME_BODY = `
 <div class="social-card reveal">
 <div class="sc-header">
 <div class="sc-avatar"></div>
-<div><div class="sc-name">hegemoniacademy</div><div class="sc-music">â™ª Hegemoni Academy</div></div>
+<div><div class="sc-name">theplaymakers.id</div><div class="sc-music">â™ª The Playmakers</div></div>
 <div class="sc-dots">···</div>
 </div>
 <div class="sc-body" style="background-image:url(&quot;/assets/images/b2ed7d20-8872-46d6-8e3d-1efd819ceff8.jpg&quot;);background-size:cover;background-position:center;position:relative">
@@ -761,7 +761,7 @@ const HOME_BODY = `
 <div class="social-card reveal">
 <div class="sc-header">
 <div class="sc-avatar"></div>
-<div><div class="sc-name">hegemoniacademy</div><div class="sc-music">â™ª Hegemoni Academy</div></div>
+<div><div class="sc-name">theplaymakers.id</div><div class="sc-music">â™ª The Playmakers</div></div>
 <div class="sc-dots">···</div>
 </div>
 <div class="sc-body" style="background-image:url(&quot;/assets/images/38bfdd6b-301e-46b0-8a74-108463af5c7c.jpg&quot;);background-size:cover;background-position:center;position:relative">
@@ -775,7 +775,7 @@ const HOME_BODY = `
 <div class="social-card reveal sc-tall">
 <div class="sc-header">
 <div class="sc-avatar"></div>
-<div><div class="sc-name">hegemoniacademy</div><div class="sc-music">â™ª Hegemoni Academy</div></div>
+<div><div class="sc-name">theplaymakers.id</div><div class="sc-music">â™ª The Playmakers</div></div>
 <div class="sc-dots">···</div>
 </div>
 <div class="sc-body-tall" style="background-image:url(&quot;/assets/images/48785732-78c5-410d-a9e9-c345399038d0.jpg&quot;);background-size:cover;background-position:center;position:relative">
@@ -789,7 +789,7 @@ const HOME_BODY = `
 <div class="social-card reveal">
 <div class="sc-header">
 <div class="sc-avatar"></div>
-<div><div class="sc-name">hegemoniacademy</div><div class="sc-music">â™ª Hegemoni Academy</div></div>
+<div><div class="sc-name">theplaymakers.id</div><div class="sc-music">â™ª The Playmakers</div></div>
 <div class="sc-dots">···</div>
 </div>
 <div class="sc-body" style="background-image:var(--di1);background-size:cover;background-position:center;position:relative">
@@ -808,7 +808,7 @@ const HOME_BODY = `
 <div class="reg-left reveal">
 <div class="reg-eyebrow">✦ Daftar Sekarang</div>
 <h2 class="reg-heading">SIAP MASUK?<em>Playbook menunggu.</em></h2>
-<p class="reg-subtext">200 seats. Closed-door. Sekali daftar, lifetime alumni network. Isi form — tim gw akan follow up dalam 1×24 jam.</p>
+<p class="reg-subtext">200 seats. Closed-door. Sekali daftar, lifetime alumni network. Isi form — tim saya akan follow up dalam 1×24 jam.</p>
 <div class="reg-bubbles">
 <div class="bubble-deco" style="width:80px;height:80px;background:var(--gold);top:20px;left:180px;opacity:.12"></div>
 <div class="bubble-deco" style="width:48px;height:48px;background:var(--gold);bottom:40px;left:80px;opacity:.08"></div>
@@ -881,7 +881,7 @@ const HOME_BODY = `
 </div>
 </div>
 <div class="form-group">
-<label>Darimana kamu tahu Hegemoni Academy?</label>
+<label>Darimana kamu tahu The Playmakers?</label>
 <select>
 <option disabled="" selected="" value="">Pilih sumber</option>
 <option>Instagram / TikTok</option>
@@ -905,13 +905,13 @@ const HOME_BODY = `
 <div class="footer-brand">
 <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
 <div style="width:36px;height:36px;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="display:inline-block;background:var(--di0) center/contain no-repeat;width:100%;height:100%;object-fit:contain;filter:brightness(0) invert(1)"></span></div>
-<div style="font-weight:500;font-size:12px;letter-spacing:2px;text-transform:uppercase">HEGEMONI<br>ACADEMY</div>
+<div style="font-weight:500;font-size:12px;letter-spacing:2px;text-transform:uppercase">THE<br>PLAYMAKERS</div>
 </div>
 <p style="font-size:13px;line-height:1.7;color:rgba(245,241,234,.35)">"Playbook Dari Playmaker Yang Masih Jalan." · Execute. In Confidence.</p>
 </div>
 <div class="footer-col"><h4>Program</h4><a href="#kurikulum">Kurikulum</a><a href="#faculty">Faculty</a><a href="#harga">Harga</a></div>
 <div class="footer-col"><h4>Company</h4><a href="#">Hegemoni Group</a><a href="#">Tentang Kami</a><a href="#">Karir</a></div>
-<div class="footer-col"><h4>Contact</h4><a href="#"><span>hello@hegemoniacademy.com</span></a><a href="#">WhatsApp</a><a href="#">Instagram</a></div>
+<div class="footer-col"><h4>Contact</h4><a href="#"><span>hello@theplaymakers.id</span></a><a href="#">WhatsApp</a><a href="#">Instagram</a></div>
 </div>
 <div class="footer-bottom">
 <span>Â© 2026 Hegemoni Group · Jakarta, Indonesia</span>

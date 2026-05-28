@@ -37,7 +37,7 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.k-aorb         { position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; will-change: transform; }
+.k-aorb         { position: absolute; border-radius: 50%; filter: blur(60px); pointer-events: none; contain: layout paint; }
 .k-aorb-a1      { animation: k-af1 16s ease-in-out infinite alternate; }
 .k-aorb-a2      { animation: k-af2 20s ease-in-out infinite alternate; }
 .k-aorb-a3      { animation: k-af3 24s ease-in-out infinite alternate; }
@@ -411,6 +411,7 @@
   min-width: 22px;
   color: var(--accent);
   opacity: .65;
+  text-align: right;
 }
 
 .k-detail-del {
@@ -456,12 +457,12 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1040px;
+  max-width: 1200px;
 }
 
 .k-laptop {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 10;
   border-radius: 16px;
   background: #0A0A0A;
   border: 1px solid rgba(255, 255, 255, 0.08);

@@ -110,7 +110,7 @@ const homeJsonLd = {
 
 /* ──────────────────────────────────────────────
    HOME — converted from the original bundled
-   Hegemoni Academy `index.html`.
+   The Playmakers `index.html`.
 
    The body markup (hero, kurikulum, faculty, harga,
    FAQ, footer, …) is preserved verbatim and injected
@@ -142,14 +142,13 @@ export default function HomePage() {
 
       <main dangerouslySetInnerHTML={{ __html: HOME_BODY }} />
 
-      {/* Bumper intro animation (~2 MB of inline HTML/CSS — hosted as a
-          separate JS file so it doesn't bloat the page bundle). */}
+      {/* Bumper intro animation (~2 MB inline HTML/CSS).
+          lazyOnload = loaded after page is idle, doesn't block hero render. */}
       <Script
         src="/legacy/index-bumper.js"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
-      {/* All other interactive scripts: scroll reveal, mega menu,
-          counters, typewriter, marquee, etc. */}
+      {/* Interactive scripts: scroll reveal, mega menu, counters, typewriter, marquee. */}
       <Script
         src="/legacy/index-runtime.js"
         strategy="afterInteractive"

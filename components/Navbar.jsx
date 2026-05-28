@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 /* ──────────────────────────────────────────────
-   Mega menu data — sourced from Hegemoni Academy
+   Mega menu data — sourced from The Playmakers
    "Program" dropdown (4 stages). Edit this list to
    change what shows in the Program mega menu.
    ────────────────────────────────────────────── */
@@ -113,7 +113,7 @@ export default function Navbar() {
           />
         </div>
         <div className="nav-logo-text">
-          HEGEMONI<br />ACADEMY
+          THE<br />PLAYMAKERS
         </div>
       </a>
 

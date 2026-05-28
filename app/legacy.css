@@ -3372,7 +3372,7 @@ body{
 /* === next block === */
 
 
-/* v52: unify all roadmap/module icons with final Hegemoni Academy logo */
+/* v52: unify all roadmap/module icons with final The Playmakers logo */
 .hfwt-item .hfwt-icon,
 .hfwt-item:nth-child(n) .hfwt-icon,
 .hfwt-item:nth-child(n).vis .hfwt-icon,
@@ -4691,6 +4691,44 @@ body{
 }
 
 
+/* === Performance: skip rendering of off-screen sections ===================
+   content-visibility: auto tells browser to skip layout/paint for elements
+   that are outside the viewport. Browser still allocates space via
+   contain-intrinsic-size so scrollbar doesn't jump. Massive scroll perf win
+   on heavy pages. */
+.sec,
+.hfw-section,
+.social-sec,
+.reg-section,
+.footer {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 800px;
+}
+
+/* Avoid heavy GPU layers on idle elements */
+.k-aorb,
+.brand-marquee-track,
+.announce-track {
+  contain: layout paint;
+}
+
+/* Disable smooth-scroll which can stutter on heavy pages — use native */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: auto !important; }
+}
+
+/* Clear will-change from idle elements — was forcing permanent GPU layers
+   (each layer eats memory). Browser will lift to GPU on-demand if needed. */
+.hero-kpi-marquee-shell,
+#program.ha-diff-takeover .sec-center,
+#program.ha-diff-takeover .highlights,
+.k-tier-card,
+.hfwt-icon,
+.hdb-slide {
+  will-change: auto !important;
+}
+
+
 /* === Fix hero clipping on narrower desktop viewports ====================
    Default rule absolute-positions .hero inside .hero-dark-block, locking
    content into min-height. On narrow desktops the 50vw min-height shrinks
@@ -4799,10 +4837,11 @@ body{
 }
 @media (max-width: 600px) {
   .nav-logo-mark {
-    width: 27px !important;
-    height: 27px !important;
+    width: 38px !important;
+    height: 38px !important;
   }
   .nav-logo-text {
-    font-size: 8.5px !important;
+    font-size: 11.5px !important;
+    letter-spacing: 0.18em !important;
   }
 }

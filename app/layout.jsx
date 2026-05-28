@@ -20,7 +20,7 @@ export const metadata = {
   keywords: [
     'The Playmakers',
     'theplaymakers.id',
-    'Hegemoni Academy',
+    'The Playmakers Academy',
     'commerce education Indonesia',
     'kursus commerce Indonesia',
     'sekolah brand Indonesia',
@@ -102,7 +102,7 @@ export const metadata = {
     creator: '@theplaymakersid',
   },
   verification: {
-    // Tambah ID Google Search Console setelah lo claim domain
+    // Tambah ID Google Search Console setelah kamu claim domain
     // google: 'xxxx',
   },
 };
@@ -122,7 +122,7 @@ const jsonLd = {
       '@type': 'Organization',
       '@id': `${SITE_URL}/#organization`,
       name: SITE_NAME,
-      alternateName: ['The Playmakers Academy', 'Hegemoni Academy', 'Hegemoni Group'],
+      alternateName: ['The Playmakers Academy', 'Hegemoni Group'],
       url: SITE_URL,
       logo: {
         '@type': 'ImageObject',
@@ -203,6 +203,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="id">
       <head>
+        {/* Preload first hero slide for fast LCP */}
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/images/1.webp"
+          type="image/webp"
+          fetchPriority="high"
+        />
+        {/* DNS prefetch + preconnect for fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
