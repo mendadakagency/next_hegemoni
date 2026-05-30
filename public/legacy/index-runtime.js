@@ -3,9 +3,13 @@
 (function(){
 try {
 
-window.__HA_BUMPER_PENDING = true;
-/* Lock immediately so body content stays hidden until the bumper paints. */
-document.documentElement.classList.add('ha-bumper-lock');
+if (!sessionStorage.getItem('ha_bumper_seen')) {
+  window.__HA_BUMPER_PENDING = true;
+  /* Lock immediately so body content stays hidden until the bumper paints. */
+  document.documentElement.classList.add('ha-bumper-lock');
+} else {
+  window.__HA_BUMPER_PENDING = false;
+}
 
 } catch(e) { console.error('[hegemoni-runtime] block 0:', e); }
 })();

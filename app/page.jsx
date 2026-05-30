@@ -127,13 +127,7 @@ const homeJsonLd = {
 export default function HomePage() {
   return (
     <>
-      {/* Lock body before paint until the bumper intro finishes (matches
-          original index.html behaviour). */}
-      <Script id="ha-bumper-lock" strategy="beforeInteractive">
-        {`window.__HA_BUMPER_PENDING = true;`}
-      </Script>
-
-      <Script
+<Script
         id="ld-home-courses"
         type="application/ld+json"
         strategy="beforeInteractive"
@@ -142,10 +136,10 @@ export default function HomePage() {
 
       <main dangerouslySetInnerHTML={{ __html: HOME_BODY }} />
 
-      {/* Bumper intro animation (~2 MB inline HTML/CSS).
-          lazyOnload = loaded after page is idle, doesn't block hero render. */}
+      {/* Gate script: loads the bumper only on the very first visit.
+          On returning visits the gate returns immediately, skipping the 2 MB download. */}
       <Script
-        src="/legacy/index-bumper.js"
+        src="/legacy/bumper-gate.js"
         strategy="lazyOnload"
       />
       {/* Interactive scripts: scroll reveal, mega menu, counters, typewriter, marquee. */}

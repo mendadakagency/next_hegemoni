@@ -19,7 +19,11 @@
       "Bash(grep -nE 'nav-mobile-menu|className=\"nav\"|</div>\\\\s*$|return \\\\\\(|</>$|^\\\\s*<>' c:/nextjs/components/Navbar.jsx)",
       "Bash(timeout 45 node_modules/.bin/next build)",
       "Bash(awk 'NR>=88 && NR<=310' \"c:/Users/yoga-laptop/next_hegemoni/app/_partials/home-body.js\")",
-      "Bash(grep -c '`')"
+      "Bash(grep -c '`')",
+      "Bash(dir /s /b \"c:\\\\Users\\\\Pujangga\\\\next_hegemoni\")",
+      "Bash(powershell -Command \"Get-ChildItem -Path 'c:\\\\Users\\\\Pujangga\\\\next_hegemoni' -Recurse -Force | Select-Object FullName | Sort-Object\")",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\Pujangga\\\\next_hegemoni\" -Force)",
+      "Bash(Select-Object -First 20)"
     ]
   }
 }

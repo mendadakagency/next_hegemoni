@@ -4845,3 +4845,25 @@ body{
     letter-spacing: 0.18em !important;
   }
 }
+
+/* ── Reduce gap between stats bar and logo marquee */
+.hero-kpi-marquee-shell .brand-marquee-wrap {
+  margin-top: 8px !important;
+}
+
+/* ── Remove italic from all section em subtitles + typewriter spans,
+   match kurikulum SectionTitle style (font-extrabold / not-italic / tracking-[-0.02em]) */
+.sec-title em,
+.hfw-heading em,
+.social-heading em,
+.reg-heading em,
+.hero h1 .line-gold,
+.hero h1 em,
+.typing-active-commerce,
+.hero h1 .line-gold .typing-active-commerce,
+.hfw-heading em .typing-roadmap-scale,
+.typing-roadmap-scale {
+  font-style: normal !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+}

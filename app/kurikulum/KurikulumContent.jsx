@@ -58,7 +58,7 @@ function SectionTitle({ main, em, dark = false }) {
     <h2 className={`font-black text-[clamp(42px,5.5vw,68px)] leading-[0.92] tracking-[-0.035em] uppercase ${dark ? 'text-paper' : 'text-ink'}`}>
       {main}
       {em && (
-        <em className={`block not-italic font-extrabold italic mt-1 normal-case tracking-[-0.02em] text-[0.82em] ${dark ? 'text-gold' : 'text-amber'}`}>
+        <em className={`block not-italic font-extrabold mt-1 normal-case tracking-[-0.02em] text-[0.82em] ${dark ? 'text-gold' : 'text-amber'}`}>
           {em}
         </em>
       )}
@@ -79,10 +79,8 @@ function TagChip({ tag }) {
   );
 }
 
-// Expandable module card — supports light/dark mode via `theme` prop
+// Module card — static, no expand/collapse
 function ModuleCard({ mod, accent, theme = 'light' }) {
-  const [open, setOpen] = useState(false);
-
   const accentColor = {
     amber:   '#9A5F08',
     gold:    '#C8830C',
@@ -93,67 +91,30 @@ function ModuleCard({ mod, accent, theme = 'light' }) {
 
   return (
     <div
-      className={`k-mod ${isDark ? 'k-mod-dark' : 'k-mod-light'} ${open ? 'is-open' : ''}`}
+      className={`k-mod ${isDark ? 'k-mod-dark' : 'k-mod-light'}`}
       style={{ '--accent': accentColor }}
+      title={mod.title}
     >
-      <button
-        type="button"
-        onClick={() => setOpen((v) => !v)}
-        className="k-mod-btn"
-        aria-expanded={open}
-      >
-        {/* Number badge — filled with accent on hover */}
+      <div className="k-mod-btn">
         <span className="k-mod-badge" aria-hidden>
           <span className="k-mod-badge-n">{mod.n}</span>
         </span>
-
-        {/* Content */}
         <span className="k-mod-info">
           <span className="k-mod-titlerow">
             <span className="k-mod-title">{mod.title}</span>
+          </span>
+          <span className="k-mod-meta" style={{ justifyContent: 'space-between' }}>
+            <span className="k-mod-dur" style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ flexShrink: 0, opacity: .75 }}>
+                <circle cx="12" cy="12" r="10"/>
+                <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/>
+              </svg>
+              {mod.dur}
+            </span>
             {mod.free && <span className="k-mod-freepill">Gratis</span>}
           </span>
-          <span className="k-mod-sub">{mod.sub}</span>
-          <span className="k-mod-meta">
-            {mod.tags.map((t) => <TagChip key={t} tag={t} />)}
-            <span className="k-mod-dot" aria-hidden>·</span>
-            <span className="k-mod-dur">{mod.dur}</span>
-          </span>
         </span>
-
-        {/* Arrow indicator */}
-        <span className="k-mod-arrow" aria-hidden>
-          <svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="1.5">
-            <path d="M3 4.5L6 7.5L9 4.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </span>
-      </button>
-
-      {open && (
-        <div className="k-mod-detail">
-          {mod.cs && (
-            <div className="k-detail-cs-block">
-              <div className="k-detail-label">Case Study Referensi</div>
-              <div className="k-detail-cs">{mod.cs}</div>
-            </div>
-          )}
-          <div className="k-detail-label">Sub-Sections</div>
-          <ol className="k-detail-subs">
-            {mod.subs.map((s, i) => (
-              <li key={i}>
-                <span className="k-detail-subn">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <span>{s}</span>
-              </li>
-            ))}
-          </ol>
-          <div className="k-detail-del">
-            <span className="k-detail-del-label">Deliverable</span>
-            <span className="k-detail-del-text">{mod.del}</span>
-          </div>
-        </div>
-      )}
+      </div>
     </div>
   );
 }
@@ -818,7 +779,7 @@ export default function KurikulumContent() {
             <p className="k-fu-1 font-mono text-[11.5px] sm:text-[10px] tracking-[2px] sm:tracking-[3.5px] uppercase text-paper/65 font-semibold sm:font-medium mb-7 sm:mb-7">
               <span className="text-gold mr-1.5">10</span>· Curriculum Map V1 · 2026
             </p>
-            <h1 className="k-fu-2 font-black text-[clamp(32px,6.5vw,130px)] leading-[0.9] tracking-[-0.04em] uppercase mb-5 sm:mb-5">
+            <h1 className="k-fu-2 font-black text-[clamp(32px,6.5vw,90px)] leading-[0.9] tracking-[-0.04em] uppercase mb-5 sm:mb-5">
               69 Modul.
               <em className="block not-italic font-extrabold italic text-gold normal-case tracking-[-0.03em] text-[0.72em] mt-1">
                 Tiga Tier.<br/>Satu Platform.

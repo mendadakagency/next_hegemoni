@@ -158,11 +158,15 @@
    auto-fills the empty space below its neighbor.
    ────────────────────────────────────────────── */
 .k-mod-grid {
-  column-count: 1;
-  column-gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
 }
-@media (min-width: 1024px) {
-  .k-mod-grid { column-count: 2; }
+@media (min-width: 768px) {
+  .k-mod-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1280px) {
+  .k-mod-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ──────────────────────────────────────────────
@@ -176,12 +180,25 @@
   border-radius: 10px;
   overflow: hidden;
   transition: background .25s, border-color .25s, box-shadow .25s, transform .25s;
-  break-inside: avoid;
-  -webkit-column-break-inside: avoid;
-  page-break-inside: avoid;
   display: block;
   width: 100%;
-  margin-bottom: 10px;
+}
+
+/* Left accent bar via pseudo-element — no conflict with existing border logic */
+.k-mod::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: color-mix(in srgb, var(--accent) 45%, transparent);
+  transition: background .25s;
+  z-index: 1;
+}
+.k-mod:hover::before,
+.k-mod.is-open::before {
+  background: var(--accent);
 }
 
 /* light theme */
@@ -193,11 +210,12 @@
   border-color: color-mix(in srgb, var(--accent) 25%, transparent);
   box-shadow: 0 6px 20px -8px rgba(10,10,10,.12);
   transform: translateY(-1px);
+  background: color-mix(in srgb, var(--accent) 4%, #fff);
 }
 .k-mod-light.is-open {
   border-color: color-mix(in srgb, var(--accent) 35%, transparent);
   box-shadow: 0 14px 38px -12px rgba(10,10,10,.18);
-  background: linear-gradient(180deg, #fff 0%, color-mix(in srgb, var(--accent) 3%, #fff) 100%);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 4%, #fff) 0%, color-mix(in srgb, var(--accent) 2%, #fff) 100%);
 }
 
 /* dark theme */
@@ -207,12 +225,12 @@
 }
 .k-mod-dark:hover {
   border-color: color-mix(in srgb, var(--accent) 35%, transparent);
-  background: #211f1a;
+  background: color-mix(in srgb, var(--accent) 8%, #1C1C1C);
   transform: translateY(-1px);
 }
 .k-mod-dark.is-open {
   border-color: color-mix(in srgb, var(--accent) 45%, transparent);
-  background: linear-gradient(180deg, #1f1d18 0%, #1C1C1C 100%);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, #1C1C1C) 0%, #1C1C1C 100%);
   box-shadow: 0 14px 38px -12px rgba(0,0,0,.6);
 }
 
@@ -223,10 +241,10 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 18px 20px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 14px;
   font-family: inherit;
   color: inherit;
 }
@@ -234,9 +252,9 @@
 /* Number badge — square w/ accent border, fills on hover */
 .k-mod-badge {
   flex-shrink: 0;
-  width: 44px;
-  height: 44px;
-  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -245,7 +263,7 @@
   background: color-mix(in srgb, var(--accent) 6%, transparent);
 }
 .k-mod-badge-n {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 900;
   letter-spacing: -.02em;
   color: var(--accent);
@@ -262,7 +280,7 @@
   color: #fff;
 }
 
-.k-mod-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.k-mod-info { flex: 1; min-width: 0; display: flex; flex-direction: column; }
 .k-mod-titlerow {
   display: flex;
   align-items: center;
@@ -274,6 +292,10 @@
   font-weight: 800;
   line-height: 1.3;
   letter-spacing: -.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 .k-mod-light .k-mod-title { color: #0A0A0A; }
 .k-mod-dark  .k-mod-title { color: #F5F1EA; }
@@ -307,17 +329,16 @@
 .k-mod-light .k-mod-dot { color: rgba(10,10,10,.25); }
 .k-mod-dark  .k-mod-dot { color: rgba(245,241,234,.25); }
 
-/* Inline FREE pill — replaces the corner ribbon */
+/* FREE pill — inline at the end of the meta row */
 .k-mod-freepill {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
   font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 800;
   letter-spacing: .12em;
   text-transform: uppercase;
-  padding: 3px 9px;
+  padding: 2px 8px;
   border-radius: 999px;
   background: #16A34A;
   color: #fff;
@@ -467,8 +488,8 @@
   background: #0A0A0A;
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow:
-    0 60px 120px -30px rgba(0, 0, 0, 0.85),
-    0 25px 60px -10px var(--accent, rgba(200, 131, 12, 0.22)),
+    0 32px 64px -20px rgba(0, 0, 0, 0.75),
+    0 12px 28px -8px var(--accent, rgba(200, 131, 12, 0.10)),
     0 0 0 1px rgba(255, 255, 255, 0.04),
     inset 0 1px 0 rgba(255, 255, 255, 0.06);
   overflow: hidden;
@@ -772,9 +793,9 @@
 }
 
 @media (max-width: 640px) {
-  .k-mod-btn { padding: 14px; gap: 14px; }
-  .k-mod-badge { width: 38px; height: 38px; }
-  .k-mod-badge-n { font-size: 14px; }
+  .k-mod-btn { padding: 10px 12px; gap: 10px; }
+  .k-mod-badge { width: 32px; height: 32px; }
+  .k-mod-badge-n { font-size: 12px; }
   .k-mod-detail { padding: 4px 14px 18px 14px; }
   .k-phase { gap: 12px; }
   .k-phase-bignum { font-size: 44px; }

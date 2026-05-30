@@ -222,3 +222,26 @@ html, body {
 @media (min-width: 901px) {
   .nav-mobile-menu { display: none; }
 }
+
+/* ── Bumper flash prevention ────────────────────────────────────────────
+   Hide all body content by default (via CSS, no JS needed) until one of
+   two classes lands on <html>:
+     • ha-ready     → bumper finished on first visit, content can show
+     • ha-no-bumper → returning visit, skip bumper entirely
+
+   Because this is plain CSS it applies before the first paint — zero
+   flash of the home page before the bumper overlay appears.
+   ─────────────────────────────────────────────────────────────────── */
+html.ha-home:not(.ha-ready):not(.ha-no-bumper) body > *:not(#ha-bumper-intro):not(#ha-start-gate) {
+  visibility: hidden !important;
+}
+
+/* When the bumper is skipped (returning visit), bypass scroll-reveal
+   animations — show all .reveal elements instantly so nothing stays
+   invisible due to IntersectionObserver timing. */
+html.ha-no-bumper .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  visibility: visible !important;
+}
