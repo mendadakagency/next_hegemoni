@@ -245,3 +245,13 @@ html.ha-no-bumper .reveal {
   transition: none !important;
   visibility: visible !important;
 }
+
+/* ── Webinar page — standalone landing page, hide main site chrome ── */
+html.ha-webinar .announce-wrap,
+html.ha-webinar .nav,
+html.ha-webinar .wa-float {
+  display: none !important;
+}
+html.ha-webinar body {
+  background: #0a1232 !important;
+}

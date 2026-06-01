@@ -187,30 +187,6 @@ export default function Navbar() {
           <Link href="/kurikulum">Kurikulum</Link>
         </div>
 
-        {/* Faculty — dropdown */}
-        <div className="nav-item" id="navFaculty">
-          <button type="button">
-            Faculty
-            <Chevron />
-          </button>
-          <div className="nav-dropdown">
-            <div className="nav-dropdown-inner">
-              <a className="drop-link" href="/#faculty">Hadi — Co-Founder Hegemoni</a>
-              <a className="drop-link" href="/#faculty">Raafi Ibrahim — Clara Beauty</a>
-              <a className="drop-link" href="/#faculty">Yoga — System Builder</a>
-              <a className="drop-link" href="/#faculty">Makky — Head of Growth</a>
-              <div className="drop-divider" />
-              <a
-                className="drop-link"
-                href="/#faculty"
-                style={{ color: 'var(--gold)', fontWeight: 600 }}
-              >
-                Lihat semua faculty →
-              </a>
-            </div>
-          </div>
-        </div>
-
         {/* Tentang — dropdown */}
         <div className="nav-item" id="navTentang">
           <button type="button">

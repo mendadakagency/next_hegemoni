@@ -208,7 +208,7 @@ export default function RootLayout({ children }) {
             all content immediately (zero flash before bumper appears).
             On returning visits           : add ha-no-bumper so .reveal
             elements are instantly visible (no waiting for IntersectionObserver). */}
-        <script dangerouslySetInnerHTML={{ __html: `(function(){var p=window.location.pathname;if(p!=='/'&&p!=='')return;document.documentElement.classList.add('ha-home');if(sessionStorage.getItem('ha_bumper_seen')){document.documentElement.classList.add('ha-no-bumper');}else{document.documentElement.classList.add('ha-bumper-lock');window.__HA_BUMPER_PENDING=true;}})();` }} />
+        <script dangerouslySetInnerHTML={{ __html: `(function(){var p=window.location.pathname;if(p==='/webinar'||p.startsWith('/webinar/')){document.documentElement.classList.add('ha-webinar');return;}if(p!=='/'&&p!=='')return;document.documentElement.classList.add('ha-home');if(sessionStorage.getItem('ha_bumper_seen')){document.documentElement.classList.add('ha-no-bumper');}else{document.documentElement.classList.add('ha-bumper-lock');window.__HA_BUMPER_PENDING=true;}})();` }} />
 
         {/* Preload first hero slide for fast LCP */}
         <link

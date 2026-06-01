@@ -1,0 +1,630 @@
+/* ================================================================
+   webinar.css — TikTok Affiliate Framework landing page
+   All classes prefixed wb- to avoid conflicts with main site CSS
+   ================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+/* ── Base ── */
+.wb-page {
+  font-family: 'DM Sans', 'Plus Jakarta Sans', sans-serif;
+  background: #0a1232;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+.wb-page * { box-sizing: border-box; }
+.wb-page img { max-width: 100%; height: auto; display: block; }
+.wb-page a { text-decoration: none; color: inherit; }
+.wb-page h1, .wb-page h2, .wb-page h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.02em;
+}
+.wb-page p { margin: 0; }
+.wb-page ul { list-style: none; padding: 0; margin: 0; }
+
+/* ── Utilities ── */
+.wb-wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+.wb-blue { color: #3a5bff; }
+.wb-blue-light { color: #8aa0ff; }
+.wb-reg { font-weight: 400; }
+
+/* ══════════════════════════════════════════
+   1. HERO
+══════════════════════════════════════════ */
+.wb-hero {
+  position: relative;
+  padding: 70px 0 90px;
+  background: radial-gradient(ellipse 80% 90% at 80% 30%, #1428ff 0%, #0a1ad0 30%, #060f4a 65%, #04081f 100%);
+  text-align: center;
+  overflow: hidden;
+}
+.wb-star-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 26px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #1a3aff, #3358ff);
+  border: 1px solid rgba(255,255,255,.25);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 34px;
+  box-shadow: 0 4px 24px rgba(20,40,255,.5);
+}
+.wb-hero h1 {
+  font-size: clamp(34px, 5.6vw, 62px);
+  font-weight: 800;
+  line-height: 1.12;
+  margin-bottom: 18px;
+}
+.wb-hero-sub {
+  font-size: clamp(15px, 2vw, 19px);
+  font-weight: 500;
+  color: rgba(255,255,255,.92);
+  margin-bottom: 40px;
+}
+.wb-brand-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 840px;
+  margin: 0 auto 44px;
+}
+@media (max-width: 640px) {
+  .wb-brand-cards { grid-template-columns: 1fr; }
+}
+.wb-bcard {
+  flex: 1;
+  min-width: 340px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 22px 24px;
+  text-align: left;
+  box-shadow: 0 20px 50px rgba(0,0,0,.35);
+}
+.wb-bcard-head { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.wb-bcard-logo {
+  width: 46px; height: 46px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700; color: #fff; flex-shrink: 0;
+}
+.wb-bcard-logo.brighty { background: #7fd4e8; }
+.wb-bcard-logo.ciara { background: #8a6b52; }
+.wb-bcard-name { font-size: 17px; font-weight: 700; color: #111; }
+.wb-bcard-tag { display: inline-flex; align-items: center; gap: 4px; font-size: 10px; color: #888; font-weight: 600; margin-top: 2px; }
+.wb-bcard-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 14px 10px; }
+.wb-bstat-label {
+  font-size: 9.5px; color: #3a5bff; font-weight: 600;
+  display: flex; align-items: center; gap: 3px;
+  margin-bottom: 5px; line-height: 1.25;
+}
+.wb-bstat-label::before { content: ''; display: inline-block; width: 9px; height: 9px; background: #3a5bff; border-radius: 2px; flex-shrink: 0; }
+.wb-bstat-val { font-size: 16px; font-weight: 700; color: #111; letter-spacing: -.02em; }
+.wb-bstat-val .u { font-size: 11px; font-weight: 600; }
+.wb-bstat-per { font-size: 9px; color: #3a5bff; margin-top: 2px; }
+.wb-bcard-divider { height: 1px; background: #eef; margin: 16px 0; }
+.wb-bcard-img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.wb-akses-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 15px 56px; border-radius: 8px;
+  background: #fff; color: #111 !important;
+  font-size: 15px; font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  transition: transform .2s, box-shadow .2s;
+}
+.wb-akses-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,.3); }
+
+/* ── Zoom badge ── */
+.wb-zoom-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.wb-zoom-icon {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.wb-zoom-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2D8CFF;
+  letter-spacing: -0.5px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.wb-zoom-pill {
+  background: #E53E3E;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.wb-presenter-quote {
+  font-weight: 400;
+  color: #111;
+}
+
+/* ── Logo row with arrows ── */
+.wb-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  max-width: 100%;
+  overflow: hidden;
+}
+.wb-logo-arrow {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #f0f0f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 16px;
+  line-height: 1;
+  cursor: default;
+  user-select: none;
+}
+
+/* ── Brand logo marquee (inside presenter card) ── */
+.wb-brand-marquee-wrap {
+  overflow: hidden;
+  flex: 1;
+  min-width: 0;
+  max-width: 100%;
+  height: 32px;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.wb-brand-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: max-content;
+  height: 32px;
+  animation: wb-scrollX 18s linear infinite;
+  will-change: transform;
+}
+.wb-brand-logo {
+  width: auto !important;
+  max-width: 80px !important;
+  object-fit: contain;
+  object-position: center;
+  opacity: 0.7;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* ══════════════════════════════════════════
+   2. PRESENTER
+══════════════════════════════════════════ */
+.wb-presenter { background: #e8e8ea; color: #111; overflow: hidden; }
+.wb-presenter-inner {
+  display: flex; align-items: flex-end;
+  max-width: 1180px; margin: 0 auto;
+  min-height: 520px; gap: 0;
+}
+.wb-presenter-photo { flex: 0 0 46%; align-self: flex-end; }
+.wb-presenter-photo img { width: 100%; max-width: 520px; }
+.wb-presenter-card {
+  flex: 1;
+  min-width: 0;
+  background: #fff;
+  border-radius: 6px;
+  padding: 48px 54px;
+  margin: 60px 24px 60px 0;
+  box-shadow: 0 10px 40px rgba(0,0,0,.08);
+  overflow: hidden;
+}
+.wb-presenter-card h2 {
+  font-size: clamp(22px, 2.6vw, 30px); font-weight: 800;
+  color: #1a2cff; line-height: 1.25; margin-bottom: 22px;
+}
+.wb-presenter-card p { font-size: 15px; color: #555; line-height: 1.85; margin-bottom: 32px; }
+.wb-pcard-logos { display: flex; align-items: center; gap: 26px; }
+.wb-pcard-arrow {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: #f0f0f3; display: flex; align-items: center;
+  justify-content: center; color: #999; flex-shrink: 0; font-size: 15px;
+}
+.wb-pcard-brand { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 22px; font-weight: 700; }
+.wb-marquee-strip {
+  background: linear-gradient(90deg, #04081f, #0e1bb0, #1a2cff, #0e1bb0, #04081f);
+  padding: 15px 0; overflow: hidden; white-space: nowrap;
+}
+.wb-marquee-strip-inner {
+  display: inline-flex; gap: 60px;
+  animation: wb-scrollX 22s linear infinite;
+  font-size: 16px; font-weight: 600; color: #fff;
+}
+.wb-marquee-strip-inner span { display: inline-flex; align-items: center; gap: 8px; }
+
+/* ══════════════════════════════════════════
+   3. PAIN POINTS
+══════════════════════════════════════════ */
+.wb-pain { background: #fff; color: #111; padding: 80px 0; }
+.wb-pain-head { max-width: 640px; margin: 0 auto; text-align: center; }
+.wb-pain-head h2 { font-size: clamp(26px, 3.6vw, 38px); font-weight: 800; color: #3a3a3a; line-height: 1.25; margin-bottom: 18px; }
+.wb-pain-head p { font-size: 14px; color: #888; line-height: 1.6; margin-bottom: 40px; }
+.wb-pain-list { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+.wb-pain-row {
+  display: flex; align-items: stretch; border-radius: 8px; overflow: hidden;
+  background: linear-gradient(90deg, #0a0a0a 0%, #0a0a0a 18%, #1a2cff 100%);
+  min-height: 78px;
+}
+.wb-pain-n { flex: 0 0 110px; display: flex; align-items: center; justify-content: center; font-size: 36px; font-weight: 800; color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; }
+.wb-pain-t { flex: 1; display: flex; align-items: center; padding: 18px 26px 18px 0; font-size: 17px; font-weight: 700; color: #fff; line-height: 1.35; }
+
+/* ══════════════════════════════════════════
+   4. PROOF
+══════════════════════════════════════════ */
+.wb-proof { background: #fff; color: #111; padding: 40px 0 80px; }
+.wb-proof h2 { font-size: clamp(24px, 3.4vw, 34px); font-weight: 800; color: #3a3a3a; line-height: 1.3; max-width: 620px; margin: 0 auto 56px; text-align: center; }
+.wb-proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1000px; margin: 0 auto; }
+.wb-proof-col h4 { font-size: 19px; font-weight: 800; color: #111; margin-bottom: 14px; }
+.wb-proof-shot { border: 1px solid #eee; border-radius: 8px; padding: 14px; box-shadow: 0 4px 16px rgba(0,0,0,.05); }
+.wb-ps-top { font-size: 9px; color: #999; margin-bottom: 8px; display: flex; justify-content: space-between; }
+.wb-ps-row { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-top: 1px solid #f3f3f3; }
+.wb-ps-rank { font-size: 10px; color: #999; width: 10px; flex-shrink: 0; }
+.wb-ps-av { width: 22px; height: 22px; border-radius: 50%; background: #ddd; flex-shrink: 0; }
+.wb-ps-info { flex: 1; line-height: 1.2; min-width: 0; }
+.wb-ps-name { font-size: 10px; font-weight: 700; color: #222; }
+.wb-ps-handle { font-size: 8.5px; color: #999; }
+.wb-ps-badge { font-size: 8px; padding: 2px 6px; border-radius: 4px; background: #e7f0ff; color: #3a5bff; font-weight: 600; white-space: nowrap; }
+.wb-ps-badge.so { background: #e9fbef; color: #16a34a; }
+.wb-ps-rev { font-size: 10px; font-weight: 700; color: #222; white-space: nowrap; }
+.wb-proven-bubble {
+  margin: 48px auto 0; max-width: 480px; margin-right: 0;
+  background: linear-gradient(95deg, #18181b 0%, #1e3aff 100%);
+  border-radius: 20px 0 20px 0; padding: 24px 28px; color: #fff;
+  box-shadow: 0 8px 32px rgba(0,0,0,.25);
+}
+.wb-proven-bubble h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.wb-proven-bubble p { font-size: 13.5px; color: rgba(255,255,255,.9); line-height: 1.65; }
+
+/* ══════════════════════════════════════════
+   5. BRAND BARU
+══════════════════════════════════════════ */
+.wb-baru { background: #fff; color: #111; padding: 40px 0 90px; }
+.wb-baru h2 { font-size: clamp(24px, 3.4vw, 34px); font-weight: 800; color: #3a3a3a; line-height: 1.3; max-width: 640px; margin: 0 auto 50px; text-align: center; }
+.wb-baru-shots { display: flex; gap: 40px; justify-content: center; max-width: 900px; margin: 0 auto; }
+.wb-baru-shot { flex: 1; border: 1px solid #e8eef0; border-radius: 10px; overflow: hidden; background: #f4f8f9; box-shadow: 0 6px 20px rgba(0,0,0,.06); }
+.wb-baru-shot-top { display: flex; align-items: center; gap: 8px; padding: 10px 12px; font-size: 10px; color: #555; }
+.wb-baru-date { background: #fff; border: 1px solid #e0e6e8; border-radius: 5px; padding: 4px 8px; font-size: 9px; color: #444; flex: 1; }
+.wb-baru-body { background: #fff; margin: 0 12px 12px; border-radius: 8px; display: flex; }
+.wb-baru-cell { flex: 1; padding: 14px; }
+.wb-baru-cell:first-child { border-right: 1px solid #f0f0f0; }
+.wb-baru-cl { font-size: 10px; color: #444; font-weight: 600; margin-bottom: 6px; display: flex; align-items: center; gap: 4px; }
+.wb-baru-chk { width: 14px; height: 14px; border-radius: 3px; background: #16a34a; color: #fff; font-size: 9px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.wb-baru-cv { font-size: 17px; font-weight: 700; color: #111; }
+.wb-baru-cv .rp { font-size: 11px; color: #777; }
+.wb-baru-view { font-size: 9px; color: #16a34a; font-weight: 600; margin-top: 8px; }
+.wb-baru-bubble {
+  margin: 50px 0 0 auto; max-width: 520px;
+  background: linear-gradient(95deg, #18181b 0%, #1e3aff 100%);
+  border-radius: 20px 0 20px 0; padding: 24px 28px; color: #fff;
+  box-shadow: 0 8px 32px rgba(0,0,0,.25);
+}
+.wb-baru-bubble h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.wb-baru-bubble p { font-size: 13.5px; color: rgba(255,255,255,.9); line-height: 1.65; }
+
+/* ══════════════════════════════════════════
+   6 + 7. KURIKULUM
+══════════════════════════════════════════ */
+.wb-kuri { background: #0a1232; padding: 80px 0; }
+.wb-kuri-title { text-align: center; font-size: clamp(26px, 3.6vw, 40px); font-weight: 800; line-height: 1.25; margin-bottom: 60px; }
+.wb-kuri-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 50px; align-items: start; }
+.wb-kuri-left { position: sticky; top: 40px; }
+.wb-kuri-eyebrow {
+  display: inline-block; padding: 7px 16px; border-radius: 999px;
+  background: rgba(58,91,255,.12); border: 1px solid rgba(58,91,255,.4);
+  color: #8aa0ff; font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  margin-bottom: 24px; text-transform: uppercase;
+}
+.wb-kuri-left h2 { font-size: clamp(28px, 3.4vw, 40px); font-weight: 800; line-height: 1.15; margin-bottom: 22px; }
+.wb-kuri-left p { font-size: 15px; color: rgba(255,255,255,.6); line-height: 1.7; margin-bottom: 30px; max-width: 380px; }
+.wb-kuri-meta {
+  display: inline-flex; align-items: center; gap: 16px;
+  padding: 16px 26px; border-radius: 14px;
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1);
+  font-size: 13px; color: rgba(255,255,255,.55); letter-spacing: .06em; font-weight: 500;
+}
+.wb-kuri-meta b { color: #fff; font-size: 18px; font-weight: 800; }
+.wb-kuri-acc { display: flex; flex-direction: column; gap: 16px; }
+.wb-acc-item {
+  display: flex; align-items: center; gap: 20px;
+  padding: 22px 24px; border-radius: 16px;
+  background: rgba(255,255,255,.025); border: 1px solid rgba(255,255,255,.08);
+  transition: border-color .2s, background .2s; cursor: pointer;
+}
+.wb-acc-item:hover { border-color: rgba(58,91,255,.5); background: rgba(58,91,255,.06); }
+.wb-acc-n {
+  flex: 0 0 52px; height: 52px; border-radius: 13px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; font-weight: 800; color: #8aa0ff;
+  background: rgba(58,91,255,.12); border: 1px solid rgba(58,91,255,.3);
+}
+.wb-acc-body { flex: 1; min-width: 0; }
+.wb-acc-body h4 { font-size: 17px; font-weight: 700; margin-bottom: 5px; color: #fff; }
+.wb-acc-body p { font-size: 13.5px; color: rgba(255,255,255,.5); line-height: 1.5; margin-bottom: 10px; }
+.wb-acc-stats { display: flex; gap: 18px; font-size: 12px; color: rgba(255,255,255,.45); }
+.wb-acc-stats span { display: inline-flex; align-items: center; gap: 5px; }
+.wb-acc-plus {
+  flex: 0 0 38px; height: 38px; border-radius: 50%;
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; color: rgba(255,255,255,.6); font-weight: 300;
+}
+
+/* ══════════════════════════════════════════
+   8. PRICING
+══════════════════════════════════════════ */
+.wb-pricing { background: #0a1232; padding: 80px 0 100px; }
+.wb-pricing-head { text-align: center; margin-bottom: 46px; }
+.wb-pricing-eyebrow {
+  display: inline-block; padding: 7px 18px; border-radius: 999px;
+  background: rgba(58,91,255,.12); border: 1px solid rgba(58,91,255,.4);
+  color: #8aa0ff; font-size: 11px; font-weight: 700; letter-spacing: .14em;
+  margin-bottom: 24px; text-transform: uppercase;
+}
+.wb-pricing-head h2 { font-size: clamp(28px, 4vw, 46px); font-weight: 800; line-height: 1.18; }
+.wb-pcard {
+  position: relative; max-width: 620px; margin: 0 auto;
+  background: linear-gradient(180deg, rgba(30,40,90,.5), rgba(15,20,55,.5));
+  border: 1px solid rgba(120,140,255,.2); border-radius: 22px;
+  padding: 48px 54px; box-shadow: 0 30px 80px rgba(0,0,0,.4);
+}
+.wb-pcard-disc {
+  position: absolute; top: 30px; right: 0; transform: translateX(-10px);
+  background: #ffd633; color: #1a1400; font-size: 12px; font-weight: 800;
+  padding: 7px 16px; border-radius: 8px; letter-spacing: .04em;
+}
+.wb-pcard-cat { text-align: center; font-size: 11px; letter-spacing: .18em; color: rgba(255,255,255,.4); font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
+.wb-pcard-name { text-align: center; font-size: 17px; font-weight: 700; margin-bottom: 26px; }
+.wb-pcard-old { text-align: center; font-size: 18px; color: rgba(255,255,255,.35); text-decoration: line-through; margin-bottom: 4px; }
+.wb-pcard-price { text-align: center; font-size: clamp(44px, 7vw, 68px); font-weight: 800; line-height: 1; margin-bottom: 10px; font-family: 'Plus Jakarta Sans', sans-serif; }
+.wb-pcard-note { text-align: center; font-size: 13px; color: rgba(255,255,255,.4); margin-bottom: 28px; }
+.wb-pcard-divider { height: 1px; background: rgba(255,255,255,.1); margin: 28px 0; }
+.wb-pcard-feats { margin-bottom: 34px; }
+.wb-pcard-feats li { display: flex; align-items: flex-start; gap: 12px; padding: 9px 0; font-size: 14.5px; color: rgba(255,255,255,.85); line-height: 1.5; }
+.wb-check-icon { flex-shrink: 0; color: #22c55e; margin-top: 1px; }
+.wb-gabung-btn {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  width: 100%; padding: 18px; border-radius: 12px;
+  background: linear-gradient(135deg, #5b76ff, #3a5bff);
+  color: #fff; font-size: 16px; font-weight: 700; letter-spacing: .06em;
+  font-family: 'Plus Jakarta Sans', sans-serif; border: none; cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+  box-shadow: 0 10px 30px rgba(58,91,255,.45);
+  text-decoration: none;
+}
+.wb-gabung-btn:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(58,91,255,.6); }
+.wb-pcard-guarantee { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 22px; font-size: 13px; color: rgba(255,255,255,.5); }
+.wb-pcard-guarantee span { display: inline-flex; align-items: center; gap: 6px; }
+.wb-gck { color: #22c55e; }
+
+/* ══════════════════════════════════════════
+   9. STUDENT RESULT
+══════════════════════════════════════════ */
+.wb-result { background: #0a1232; padding: 80px 0 60px; }
+.wb-result-eyebrow {
+  display: block; text-align: center; margin: 0 auto 22px; width: fit-content;
+  padding: 7px 18px; border-radius: 999px;
+  background: rgba(58,91,255,.12); border: 1px solid rgba(58,91,255,.4);
+  color: #8aa0ff; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+}
+.wb-result h2 { text-align: center; font-size: clamp(26px, 3.8vw, 42px); font-weight: 800; line-height: 1.2; margin-bottom: 54px; }
+.wb-result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
+.wb-rcard { background: rgba(255,255,255,.025); border: 1px solid rgba(255,255,255,.08); border-radius: 16px; padding: 28px 26px; }
+.wb-rcard-tag {
+  display: inline-block; padding: 6px 14px; border-radius: 7px;
+  background: rgba(255,214,51,.12); border: 1px solid rgba(255,214,51,.3);
+  color: #ffd633; font-size: 11px; font-weight: 700; letter-spacing: .04em; margin-bottom: 20px;
+}
+.wb-rcard-quote { font-size: 14.5px; color: rgba(255,255,255,.82); line-height: 1.65; margin-bottom: 24px; }
+.wb-rcard-name { font-size: 14px; font-weight: 700; color: #fff; }
+.wb-rcard-role { font-size: 11.5px; color: rgba(255,255,255,.4); margin-top: 2px; }
+.wb-activity-strip {
+  margin-top: 50px; border-radius: 12px;
+  background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.07);
+  padding: 14px 0; overflow: hidden; white-space: nowrap;
+}
+.wb-activity-inner {
+  display: inline-flex; gap: 48px;
+  animation: wb-scrollX 26s linear infinite;
+  font-size: 12.5px; color: rgba(255,255,255,.5);
+}
+.wb-activity-inner span { display: inline-flex; align-items: center; gap: 7px; }
+.wb-act-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; flex-shrink: 0; }
+.wb-act-name { color: rgba(255,255,255,.8); font-weight: 600; }
+
+/* ══════════════════════════════════════════
+   10. FAQ
+══════════════════════════════════════════ */
+.wb-faq { background: #fff; color: #111; padding: 70px 0 90px; }
+.wb-faq-eyebrow {
+  display: block; text-align: center; margin: 0 auto 22px; width: fit-content;
+  padding: 7px 18px; border-radius: 999px;
+  background: #eef2ff; border: 1px solid #d8e0ff;
+  color: #3a5bff; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+}
+.wb-faq h2 { text-align: center; font-size: clamp(26px, 3.6vw, 40px); font-weight: 800; color: #15183a; margin-bottom: 48px; }
+.wb-faq-list { max-width: 780px; margin: 0 auto; border-top: 1px solid #ededed; }
+.wb-faq-item { border-bottom: 1px solid #ededed; cursor: pointer; }
+.wb-faq-q { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 4px; font-size: 16px; font-weight: 700; color: #15183a; user-select: none; }
+.wb-faq-ic { flex-shrink: 0; font-size: 22px; color: #3a5bff; font-weight: 300; transition: transform .25s; line-height: 1; }
+.wb-faq-a { max-height: 0; overflow: hidden; font-size: 14px; color: #777; line-height: 1.75; transition: max-height .35s ease, padding .35s ease; padding: 0 4px; }
+.wb-faq-item.open .wb-faq-a { max-height: 300px; padding: 0 4px 24px; }
+.wb-faq-item.open .wb-faq-ic { transform: rotate(45deg); }
+
+/* ══════════════════════════════════════════
+   Footer
+══════════════════════════════════════════ */
+.wb-footer { background: #04081f; padding: 34px 0; text-align: center; font-size: 12px; color: rgba(255,255,255,.3); }
+
+/* ══════════════════════════════════════════
+   Keyframes
+══════════════════════════════════════════ */
+@keyframes wb-scrollX {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ══════════════════════════════════════════
+   Responsive
+══════════════════════════════════════════ */
+
+/* ── Tablet ── */
+@media (max-width: 900px) {
+  /* Presenter */
+  .wb-presenter { overflow: hidden; }
+  .wb-presenter-inner {
+    flex-direction: column;
+    align-items: center;
+    min-height: unset;
+    overflow: hidden;
+  }
+  .wb-presenter-photo {
+    flex: none;
+    width: 60%;
+    max-width: 320px;
+    align-self: center;
+  }
+  .wb-presenter-photo img { max-width: 100%; }
+  .wb-presenter-card {
+    width: calc(100% - 32px);
+    margin: 0 16px 32px;
+    padding: 28px 24px;
+    box-sizing: border-box;
+  }
+
+  /* Other sections */
+  .wb-kuri-grid { grid-template-columns: 1fr; gap: 34px; }
+  .wb-kuri-left { position: static; }
+  .wb-proof-grid { grid-template-columns: 1fr; gap: 20px; }
+  .wb-proven-bubble, .wb-baru-bubble { margin: 32px auto 0; max-width: 100%; }
+  .wb-baru-shots { flex-direction: column; }
+  .wb-result-grid { grid-template-columns: 1fr; }
+  .wb-brand-cards { gap: 10px; }
+  .wb-bcard { min-width: 0; }
+  .wb-kuri { padding: 60px 0; }
+  .wb-pricing { padding: 60px 0 80px; }
+  .wb-result { padding: 60px 0 40px; }
+  .wb-faq { padding: 50px 0 60px; }
+}
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .wb-brand-cards { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  /* Global spacing */
+  .wb-wrap { padding: 0 16px; }
+  .wb-hero { padding: 48px 0 60px; }
+  .wb-pain { padding: 50px 0; }
+  .wb-proof { padding: 30px 0 50px; }
+  .wb-baru { padding: 30px 0 60px; }
+
+  /* Hero */
+  .wb-star-pill { font-size: 13px; padding: 9px 18px; margin-bottom: 24px; }
+  .wb-hero-sub { font-size: 14px; margin-bottom: 28px; }
+  .wb-akses-btn { padding: 13px 36px; font-size: 14px; }
+
+  /* Presenter — clean vertical stack */
+  .wb-presenter-inner {
+    flex-direction: column !important;
+    align-items: center;
+    padding-top: 28px;
+    gap: 0;
+    overflow: hidden;
+  }
+  .wb-presenter-photo {
+    width: 100%;
+    max-width: 100%;
+    height: 220px;
+    overflow: hidden;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+  }
+  .wb-presenter-photo img {
+    height: 320px;
+    width: auto;
+    object-fit: contain;
+    object-position: top center;
+    margin-top: -20px;
+  }
+  .wb-presenter-card {
+    width: calc(100% - 24px);
+    margin: 0 12px 20px;
+    padding: 20px 18px;
+    border-radius: 12px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  .wb-presenter-card h2 { font-size: 17px; line-height: 1.3; margin-bottom: 10px; }
+  .wb-presenter-card p { font-size: 13px; line-height: 1.6; margin-bottom: 16px; }
+  .wb-zoom-badge { margin-bottom: 12px; gap: 8px; }
+  .wb-zoom-name { font-size: 16px; }
+  .wb-zoom-pill { font-size: 9px; padding: 3px 8px; }
+  .wb-logo-row { margin-top: 12px; gap: 8px; }
+  .wb-logo-arrow { width: 24px; height: 24px; font-size: 14px; }
+
+  /* Pain */
+  .wb-pain-n { flex: 0 0 64px; font-size: 24px; }
+  .wb-pain-t { font-size: 14px; padding: 14px 16px 14px 0; }
+  .wb-pain-list { gap: 10px; }
+  .wb-pain-row { min-height: 64px; }
+
+  /* Proof */
+  .wb-proof h2 { font-size: 22px; margin-bottom: 32px; }
+  .wb-proof-col h4 { font-size: 16px; }
+
+  /* Baru */
+  .wb-baru h2 { font-size: 22px; margin-bottom: 32px; }
+
+  /* Curriculum */
+  .wb-kuri-title { font-size: 24px; margin-bottom: 36px; }
+  .wb-kuri-left h2 { font-size: 22px; }
+  .wb-kuri-meta { padding: 12px 16px; font-size: 12px; gap: 10px; }
+  .wb-acc-item { padding: 16px; gap: 14px; }
+  .wb-acc-n { flex: 0 0 42px; height: 42px; font-size: 15px; border-radius: 10px; }
+  .wb-acc-body h4 { font-size: 15px; }
+  .wb-acc-body p { font-size: 12.5px; }
+
+  /* Pricing */
+  .wb-pricing { padding: 50px 0 60px; }
+  .wb-pricing-head h2 { font-size: 26px; }
+  .wb-pcard { padding: 28px 20px; }
+  .wb-pcard-disc { position: static; display: inline-block; transform: none; margin-bottom: 14px; }
+  .wb-pcard-price { font-size: 44px; }
+  .wb-pcard-feats li { font-size: 13.5px; }
+  .wb-gabung-btn { font-size: 14px; padding: 15px; }
+  .wb-pcard-guarantee { flex-direction: column; gap: 6px; font-size: 12px; }
+
+  /* Results */
+  .wb-result h2 { font-size: 24px; margin-bottom: 36px; }
+  .wb-rcard { padding: 22px 20px; }
+  .wb-rcard-quote { font-size: 13.5px; }
+
+  /* FAQ */
+  .wb-faq { padding: 44px 0 56px; }
+  .wb-faq h2 { font-size: 24px; margin-bottom: 32px; }
+  .wb-faq-q { font-size: 14px; padding: 18px 4px; }
+}
